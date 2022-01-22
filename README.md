@@ -15,3 +15,7 @@ When that is done enter ```D:\SETUP``` to launch setup; hit enter and continue a
 
 My install didn't download/install correctly, what should i do?
 Check your internet connection, also run cleanup.sh; be sure to make this executable or just simply run it as `sh cleanup.sh`
+
+### Credits
+
+https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this wonderful guide, also could give you more info.
