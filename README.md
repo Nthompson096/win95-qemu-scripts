@@ -14,8 +14,8 @@ When that is done enter ```D:\SETUP``` to launch setup; hit enter and continue a
 # Basic Troubleshooting
 
 My install didn't download/install correctly, what should i do?
-Check your internet connection, also run cleanup.sh; be sure to make this executable or just simply run it as `sh cleanup.sh`
+Check your internet connection, also run cleanup.sh; be sure to make this executable or just simply run it as `sh cleanup.sh`. However If you downloaded the required files (disk01.img and windows95b.iso) there would be no need and you can just run `./win95.sh` and `./winstart.sh.` when the install is finished.
 
 ### Credits
 
-https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this wonderful guide, also could give you more info. If you downloaded the required files (disk01.img and windows95b.iso) there would be no need and you can just run `./win95.sh` and `./winstart.sh.` when the install is finished.
+https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this wonderful guide, also could give you more info.
