@@ -29,4 +29,5 @@ rm ./bootdisc.7z &&
 
 	./windisc.sh &&
 	./win95.sh &&
+	./win95.sh &&
 	./winstart.sh
