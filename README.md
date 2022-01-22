@@ -18,4 +18,4 @@ Check your internet connection, also run cleanup.sh; be sure to make this execut
 
 ### Credits
 
-https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this wonderful guide, also could give you more info. If you downloaded the required files (disk01.img and windows95b.iso) therw ould be no need and you can just run `./win95.sh`.
+https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this wonderful guide, also could give you more info. If you downloaded the required files (disk01.img and windows95b.iso) there would be no need and you can just run `./win95.sh`.
