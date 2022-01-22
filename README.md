@@ -23,7 +23,7 @@ https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this won
 
 # Bounus, creating the VM with virt-manager
 
-`
+```
 <domain type="kvm">
   <name>win95</name>
   <uuid></uuid>
@@ -155,6 +155,6 @@ https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this won
     </memballoon>
   </devices>
 </domain>
-`
+```
 
 XML document above can be used to create a virtual for virt-manager you could just clone the created virtual w95 file and create a new install with virt-manager.
