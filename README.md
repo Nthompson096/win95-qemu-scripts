@@ -19,3 +19,142 @@ Check your internet connection, also run cleanup.sh; be sure to make this execut
 ### Credits
 
 https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this wonderful guide, also could give you more info.
+
+
+# Bounus, creating the VM with virt-manager
+
+`
+<domain type="kvm">
+  <name>win95</name>
+  <uuid></uuid>
+  <metadata>
+    <libosinfo:libosinfo xmlns:libosinfo="http://libosinfo.org/xmlns/libvirt/domain/1.0">
+      <libosinfo:os id="http://microsoft.com/win/95"/>
+    </libosinfo:libosinfo>
+  </metadata>
+  <memory unit="KiB">65536</memory>
+  <currentMemory unit="KiB">65536</currentMemory>
+  <vcpu placement="static">1</vcpu>
+  <os>
+    <type arch="x86_64" machine="pc-i440fx-6.2">hvm</type>
+  </os>
+  <features>
+    <acpi/>
+    <apic/>
+    <hyperv mode="custom">
+      <relaxed state="on"/>
+      <vapic state="on"/>
+      <spinlocks state="on" retries="8191"/>
+    </hyperv>
+    <vmport state="off"/>
+  </features>
+  <cpu mode="host-model" check="partial"/>
+  <clock offset="localtime">
+    <timer name="rtc" tickpolicy="catchup"/>
+    <timer name="pit" tickpolicy="delay"/>
+    <timer name="hpet" present="no"/>
+    <timer name="hypervclock" present="yes"/>
+  </clock>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>destroy</on_crash>
+  <pm>
+    <suspend-to-mem enabled="no"/>
+    <suspend-to-disk enabled="no"/>
+  </pm>
+  <devices>
+    <emulator>/usr/bin/qemu-system-x86_64</emulator>
+    <disk type="file" device="disk">
+      <driver name="qemu" type="qcow2"/>
+      <source file="path/to/w95.qcow"/>
+      <target dev="hda" bus="ide"/>
+      <boot order="3"/>
+      <address type="drive" controller="0" bus="0" target="0" unit="0"/>
+    </disk>
+    <disk type="file" device="cdrom">
+      <driver name="qemu" type="raw"/>
+      <source file="path/to/iso"/>
+      <target dev="hdb" bus="ide"/>
+      <readonly/>
+      <boot order="2"/>
+      <address type="drive" controller="0" bus="0" target="0" unit="1"/>
+    </disk>
+    <disk type="file" device="floppy">
+      <driver name="qemu" type="raw"/>
+      <source file="path/to/floppy"/>
+      <target dev="fda" bus="fdc"/>
+      <boot order="1"/>
+      <address type="drive" controller="0" bus="0" target="0" unit="0"/>
+    </disk>
+    <controller type="usb" index="0" model="ich9-ehci1">
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x7"/>
+    </controller>
+    <controller type="usb" index="0" model="ich9-uhci1">
+      <master startport="0"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x0" multifunction="on"/>
+    </controller>
+    <controller type="usb" index="0" model="ich9-uhci2">
+      <master startport="2"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x1"/>
+    </controller>
+    <controller type="usb" index="0" model="ich9-uhci3">
+      <master startport="4"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x2"/>
+    </controller>
+    <controller type="pci" index="0" model="pci-root"/>
+    <controller type="ide" index="0">
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x01" function="0x1"/>
+    </controller>
+    <controller type="virtio-serial" index="0">
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x06" function="0x0"/>
+    </controller>
+    <controller type="fdc" index="0"/>
+    <interface type="network">
+      <mac address="52:54:00:89:13:61"/>
+      <source network="default"/>
+      <model type="e1000"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x03" function="0x0"/>
+    </interface>
+    <serial type="pty">
+      <target type="isa-serial" port="0">
+        <model name="isa-serial"/>
+      </target>
+    </serial>
+    <console type="pty">
+      <target type="serial" port="0"/>
+    </console>
+    <channel type="spicevmc">
+      <target type="virtio" name="com.redhat.spice.0"/>
+      <address type="virtio-serial" controller="0" bus="0" port="1"/>
+    </channel>
+    <input type="tablet" bus="usb">
+      <address type="usb" bus="0" port="1"/>
+    </input>
+    <input type="mouse" bus="ps2"/>
+    <input type="keyboard" bus="ps2"/>
+    <graphics type="spice" autoport="yes">
+      <listen type="address"/>
+      <image compression="off"/>
+    </graphics>
+    <sound model="ac97">
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x0"/>
+    </sound>
+    <audio id="1" type="spice"/>
+    <video>
+      <model type="qxl" ram="65536" vram="65536" vgamem="16384" heads="1" primary="yes"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x02" function="0x0"/>
+    </video>
+    <redirdev bus="usb" type="spicevmc">
+      <address type="usb" bus="0" port="2"/>
+    </redirdev>
+    <redirdev bus="usb" type="spicevmc">
+      <address type="usb" bus="0" port="3"/>
+    </redirdev>
+    <memballoon model="virtio">
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x07" function="0x0"/>
+    </memballoon>
+  </devices>
+</domain>
+`
+
+XML document above can be used to create a virtual for virt-manager you could just clone the created virtual w95 file and create a new install with virt-manager.
