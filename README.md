@@ -7,7 +7,7 @@ You would simply go to your terminal of choice and enter git clone https://githu
 
 from there enter in the terminal enter ```chmod +x start.sh``` to make the installation script executable and then simply enter ``` ./start.sh ``` this will start scripts windisc.sh to create a disk image for win95, win95.sh to start the vm installation process and winstart.sh which will start win95 after the install; downloading the images will only take a few minutes depending on connection.
 
-In the command prompt hit enter for the current selection and then enter ```fdisk``` to partition the disk as DOS and enter Y to all questions; press alt-m select poweroff; this will start up the vm again for you, hit enter for the first selection and then format the C: drive with the command ```format c``` and yes and enter and it should format the C:/ drive when finished.
+In the command prompt hit enter for the current selection and then enter ```fdisk``` to partition the disk as DOS and enter Y to all questions; press alt-m select poweroff; this will start up the vm again for you, hit enter for the first selection and then format the C: drive with the command ```format c:``` and yes and enter and it should format the C:/ drive when finished.
 
 When that is done enter ```D:\SETUP``` to launch setup; hit next and enter typical, hit next for where to install enter your username and company (optional) and check all the boxes when prompted (network and sound), enter the key. 
 
