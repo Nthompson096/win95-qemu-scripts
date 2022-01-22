@@ -157,4 +157,6 @@ https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this won
 </domain>
 ```
 
-XML document above can be used to create a virtual for virt-manager you could just clone the created virtual w95 file and create a new install with virt-manager.
+XML document above can be used to create a virtual for virt-manager you could just clone the created virtual w95 file and create a new install with virt-manager. You would need to install a program named FIXCPU95, just use the floppy.
+
+http://lonecrusader.x10host.com/fix95cpu.html
