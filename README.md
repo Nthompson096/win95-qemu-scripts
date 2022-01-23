@@ -16,6 +16,13 @@ When that is done enter `D:\SETUP` to launch setup; hit enter and continue and h
 My install didn't download/install correctly, what should i do?
 Check your internet connection, also run cleanup.sh; be sure to make this executable or just simply run it as `sh cleanup.sh`. However If you downloaded the required files (disk01.img and windows95b.iso) there would be no need and you can just run `./win95.sh` and `./winstart.sh`. when the install is finished.
 
+I don't have QEMU installed, says command not found:
+
+You will have to install qemu with package manager/linux flavor of your choice; for me it would be `sudo pacman -S qemu` this would be arch or manjaro.
+For ubuntu or debian based linux it would be `sudo apt install qemu`
+for fedora or redhat based linux it would be `sudo dnf install qemu`
+These would be prime examples.
+
 ### Credits
 
 https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this wonderful guide, also could give you more info.
