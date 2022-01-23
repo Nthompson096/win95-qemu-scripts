@@ -29,8 +29,9 @@ First I would like to tell you KVM support on win95 is fincky; it doesn't shutof
 
   <details><summary>w95 xml example.</summary>
 <p>
-```
-<domain type="kvm">
+
+  ```
+  <domain type="kvm">
   <name>win95</name>
   <uuid></uuid>
   <metadata>
@@ -161,6 +162,7 @@ First I would like to tell you KVM support on win95 is fincky; it doesn't shutof
     </memballoon>
   </devices>
 </domain>
+
 ```
 </p>
 </details>
