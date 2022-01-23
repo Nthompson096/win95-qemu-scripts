@@ -27,12 +27,9 @@ First I would like to tell you KVM support on win95 is fincky; it doesn't shutof
 
 # Bounus, creating the VM with virt-manager
 
-
-```
-
-  <details><summary>and for the sake of it, here's a windows 11 example, do not copy paste.</summary>
+  <details><summary>w95 xml example.</summary>
 <p>
-
+```
 <domain type="kvm">
   <name>win95</name>
   <uuid></uuid>
@@ -164,10 +161,10 @@ First I would like to tell you KVM support on win95 is fincky; it doesn't shutof
     </memballoon>
   </devices>
 </domain>
-
+```
 </p>
 </details>
-```
+
 
 XML document above can be used to create a virtual for virt-manager you could just clone the created virtual w95 file and create a new install with virt-manager. You would need to install a program named FIXCPU95, just use the floppy.
 
