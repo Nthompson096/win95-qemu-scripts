@@ -25,6 +25,10 @@ https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95 for this won
 
 First I would like to tell you KVM support on win95 is fincky; it doesn't shutoff properly like it's supposed to so i've made it run without kvm enabled, but if you want you can run kvm support with winstartkvm.sh, before you do so you will need to run w95cpu.sh otherwise the cpu on that machine will be in protection mode and will not boot, go ahead and patch when prompted to reboot quit, you should now be able to run win95 with kvm support with the script i just mentioned earlier.
 
+# How can i connect to the internet?
+
+Sadly I haven't figured out how to, the drivers keep erroring out if I install different drivers; could be because of my configs, could be because of the OS itself as it's ancient. Besides you won't be able to do much on the net anyway (unless if you wanted to share files with FTP).
+
 # Bounus, creating the VM with virt-manager
 
   <details><summary>w95 xml example.</summary>
