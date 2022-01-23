@@ -16,13 +16,9 @@ wget 'https://dl-alt1.winworldpc.com/Microsoft%20Windows%2095B%20(4.00.1111)%20(
 
 rm ./instdisc.7z |
 
-rm -r 'Microsoft Windows 95 OSR2 - Boot Disk (Dell OEM) (3.5-1.44mb)' |
-
 rm -r 'Microsoft Windows 95B (4.00.1111) (OSR2) [English] (CD)' |
 
-rm winworldpc.com.txt |
-
-rm media-disk01.jpg &&
+rm winworldpc.com.txt &&
 
 	./windisc.sh &&
 	./win95.sh &&
