@@ -18,9 +18,10 @@ Check your internet connection, also run cleanup.sh; be sure to make this execut
 
 I don't have QEMU installed, says command not found:
 
-You will have to install qemu with package manager/linux flavor of your choice; for me it would be `sudo pacman -S qemu` this would be arch or manjaro.
-For ubuntu or debian based linux it would be `sudo apt install qemu`
-for fedora or redhat based linux it would be `sudo dnf install qemu`
+You will have to install qemu with package manager/linux flavor of your choice; 
+1) for me it would be `sudo pacman -S qemu` this would be arch or manjaro.
+2) For ubuntu or debian based linux it would be `sudo apt install qemu`
+3) for fedora or redhat based linux it would be `sudo dnf install qemu`
 These would be prime examples.
 
 ### Credits
