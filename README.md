@@ -14,7 +14,7 @@ When that is done enter `D:\SETUP` to launch setup; hit enter and continue and h
 # Basic Troubleshooting
 
 My install didn't download/install correctly, what should i do?
-Check your internet connection, also run cleanup.sh; be sure to make this executable or just simply run it as `sh cleanup.sh`. However If you downloaded the required files (windows95b.iso) there would be no need and you can just run `./win95.sh` and `./winstart.sh`. when the install is finished.
+The downloads should resume even if internet has been disconnected and it should continue with the download (otherwise the script will not execute). If there's other issues just run ./cleanup.sh and start again.
 
 I don't have QEMU installed, says command not found:
 
