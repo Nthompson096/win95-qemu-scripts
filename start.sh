@@ -10,6 +10,10 @@ chmod +x w95cpu.sh |
 
 chmod +x winstartnokvm.sh |
 
+chmod +x ff95.sh |
+
+chmod +x ie95.sh |
+
 wget 'https://dl-alt1.winworldpc.com/Microsoft%20Windows%2095B%20(4.00.1111)%20(OSR2)%20[English]%20(CD).7z' -O ./instdisc.7z &&
 
 7z e ./instdisc.7z &&
