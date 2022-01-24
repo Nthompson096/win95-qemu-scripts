@@ -35,7 +35,7 @@ First I would like to tell you KVM support on win95 is fincky; it doesn't shutof
 
 # How can i connect to the internet?
 
-# Guide on how to create virtual networking:
+### Guide on how to create virtual networking:
 you can make virtual-networking work by setting the irq freq to 9 under my computer > control panel > system > device manager > network adapters > double click on the network adapter and go to resources, and set the config manually (uncheck automatic settings), click change settings and set the value to 9, hit ok, and ok again; reboot when prompted. You may also need to go to control panel again and go to network, remove everything besides the network card then add TCP/IP and client > microsoft > client for micrsoft networks in that order; you may also need to uncomment and add the following line -cdrom windows95b.iso prior to doing so.
 
 UPDATE: Just connected to google search, was easy but most sites will crash on you; go to the icon named "the internet" and keep current settings, double click again and type in the url bar google.com. *DO NOT USE A MODEM OR ANYTHING ELSE*.
