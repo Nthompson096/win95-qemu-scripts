@@ -35,9 +35,15 @@ First I would like to tell you KVM support on win95 is fincky; it doesn't shutof
 
 # How can i connect to the internet?
 
-Sadly I haven't figured out how to, the drivers keep erroring out if I install different drivers; could be because of my configs, could be because of the OS itself as it's ancient. Besides you won't be able to do much on the net anyway (unless if you wanted to share files with FTP).
+Sadly I haven't figured out how to, the drivers keep erroring out if I install different drivers; could be because of my configs, could be because of the OS itself as it's ancient. Besides you won't be able to do much on the net anyway (unless if you wanted to share files with FTP). However you can make virtual-networking work by setting the irq freq to 9 under my computer > control panel > system > device manager > network adapters > double click on the network adapter and go to resources, and set the config manually (uncheck automatic settings), click change settings and set the value to 9, hit ok, and ok again; reboot when prompted.
+
+After that is finished enter `./winstartnokvm.sh` in terminal.
 
 # Bounus, creating the VM with virt-manager
+
+# Sound is choppy
+
+Sadly I have no idea what is causing this, like I said this OS is old so expect issues.
 
   <details><summary>w95 xml example.</summary>
 <p>
