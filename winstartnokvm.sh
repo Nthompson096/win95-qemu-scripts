@@ -7,8 +7,8 @@
 	-m 64 \
 	-cpu pentium \
 	-vga cirrus \
-	-soundhw sb16 \
 	-boot order=a \
+	#-soundhw sb16 \
         #-cdrom  \
 	#-drive file=,format=,index=0,if=floppy
 	
