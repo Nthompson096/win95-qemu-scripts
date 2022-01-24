@@ -39,9 +39,9 @@ Sadly I haven't figured out how to, the drivers keep erroring out if I install d
 
 After that is finished enter `./winstartnokvm.sh` in terminal.
 
-# Sound is choppy
+# Sound is choppy, there is no sound.
 
-Sadly I have no idea what is causing this, like I said this OS is old so expect issues.
+Sadly I have no idea what is causing this, like I said this OS is old so expect issues. Recently decided to remove -soundhw sb16 in the scripts but you can readd it if you'd like; be warned I had issues with BSOD.
 
 # Bounus, creating the VM with virt-manager
 
