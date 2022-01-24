@@ -9,7 +9,7 @@
 	-vga cirrus \
 	-soundhw sb16 \
 	-boot order=a \
-        -cdrom scitech-display-doctor-7.iso \
+        #-cdrom  \
 	#-drive file=,format=,index=0,if=floppy
 	
 	# comments
