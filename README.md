@@ -39,11 +39,11 @@ Sadly I haven't figured out how to, the drivers keep erroring out if I install d
 
 After that is finished enter `./winstartnokvm.sh` in terminal.
 
-# Bounus, creating the VM with virt-manager
-
 # Sound is choppy
 
 Sadly I have no idea what is causing this, like I said this OS is old so expect issues.
+
+# Bounus, creating the VM with virt-manager
 
   <details><summary>w95 xml example.</summary>
 <p>
