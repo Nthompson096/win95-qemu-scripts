@@ -1,5 +1,5 @@
 # win95-qemu
-booting and creating a windows 95 vm with shell scripts, a mostly automated processes for qemu.
+booting and creating a windows 95 vm with shell scripts, a mostly automated processes for qemu; linux only.
 
 ### To start/download these scripts
 
