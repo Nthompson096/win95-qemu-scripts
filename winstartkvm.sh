@@ -9,7 +9,6 @@
 	-vga cirrus \
 	-boot order=a \
 	-enable-kvm \
-	#-soundhw sb16 \
         #-cdrom \
 	#-drive file=,format=,index=0,if=floppy
 	
