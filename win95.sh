@@ -1,7 +1,6 @@
 #!/bin/sh
 
 qemu-system-i386 \
-	-netdev user,id=win95net0 \
 	-device ne2k_isa,netdev=win95net0 \
        	-netdev user,id=win95net0,restrict=off	\
 	-drive file=win95.qcow2,format=qcow2 \
