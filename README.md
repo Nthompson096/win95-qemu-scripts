@@ -200,4 +200,4 @@ Sadly I have no idea what is causing this, like I said this OS is old so expect 
 
 XML document above can be used to create a virtual for virt-manager you could just clone the created virtual w95 file and create a new install with virt-manager. You would need to install a program named FIXCPU95, just use the floppy.
 
-http://lonecrusader.x10host.com/fix95cpu.html; however this fix is now on this github repository and will only be needed if you are having issues.
+http://lonecrusader.x10host.com/fix95cpu.html; however this fix is now on this github repository and will only be needed if you are having issues (fast CPU under KVM).
