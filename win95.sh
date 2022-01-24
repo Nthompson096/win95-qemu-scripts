@@ -11,5 +11,4 @@ qemu-system-i386 \
 	-fda disk01.img \
 	-cdrom windows95b.iso \
 	-boot a \
-	-soundhw pcspk \
-	# -soundhw sb16 
+	-soundhw pcspk 
