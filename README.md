@@ -5,7 +5,7 @@ booting and creating a windows 95 vm with shell scripts, a mostly automated proc
 
 You would simply go to your terminal of choice and enter git clone https://github.com/Nthompson096/win95-qemu-scripts.git and it should clone to the directory of your choice. 
 
-from there enter in the terminal enter ```chmod +x start.sh``` to make the installation script executable and then simply enter ``` ./start.sh ``` this will start scripts `windisc.sh` to create a disk image for win95, `win95.sh` to start the vm installation process and `winstartnokvm.sh` which will start win95 after the install; downloading the image will only take a few minutes depending on connection. If asked about overwriting any files, go ahead and enter `A` in terminal.
+from there enter in the terminal enter ```chmod +x start.sh``` to make the installation script executable and then simply enter ``` ./start.sh ``` this will start scripts `windisc.sh` to create a disk image for win95, `win95.sh` to start the vm installation process and `winstartnokvm.sh` which will start win95 after the install; downloading the image will only take a few minutes depending on connection. If asked about overwriting any files, go ahead and enter `N` in terminal.
 
 In the command prompt hit enter for the current selection and then enter `fdisk` to partition the disk as DOS and enter Y to all questions; press alt-m select machine > quit or hit ctrl-alt-g and select machine and quit; this will start up the vm again for you, hit enter for the first selection and then format the C: drive with the command `format c:` and enter `Y` and hit enter and it should format the `C:/ drive` when finished. You will be asked for a label, go ahead and name or enter nothing.
 
@@ -14,7 +14,7 @@ When that is done enter `D:\SETUP` to launch setup; hit enter and continue and h
 # Basic Troubleshooting
 
 My install didn't download/install correctly, what should i do?
-The downloads should resume even if internet has been disconnected and it should continue with the download (otherwise the script will not execute). If there's other issues just run ./cleanup.sh and start again.
+The downloads should resume even if internet has been disconnected and it should continue with the download (otherwise the script will not execute). If there's other issues just run ./cleanup.sh and start again. If asked about overwriting files, enter `N` in terminal.
 
 I don't have QEMU installed, says command not found:
 
