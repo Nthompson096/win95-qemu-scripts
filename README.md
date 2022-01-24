@@ -40,6 +40,14 @@ You need to go control panel and under network remove everything besides the net
 
 UPDATE: Just connected to google search, was easy but most sites will crash on you; go to the icon named "the internet" and keep current settings, double click again and type in the url bar google.com. **DO NOT USE A MODEM OR ANYTHING ELSE**.
 
+# Addtional Drivers 
+
+1) IE4.0
+to load just enter `./ie95.sh` 
+
+2) Firefox
+to load just enter `./ff95.sh` also included addtional drivers/ FTP Software; feel free to install if you are having issues want to share over the network somehow.
+
 After that is finished enter `./winstartnokvm.sh` in terminal.
 
 # Sound is choppy, there is no sound.
