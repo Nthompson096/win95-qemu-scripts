@@ -14,7 +14,7 @@ chmod +x ff95.sh |
 
 chmod +x ie95.sh |
 
-wget 'https://dl-alt1.winworldpc.com/Microsoft%20Windows%2095B%20(4.00.1111)%20(OSR2)%20[English]%20(CD).7z' -O ./instdisc.7z &&
+wget 'https://dl-alt1.winworldpc.com/Microsoft%20Windows%2095B%20(4.00.1111)%20(OSR2)%20[English]%20(CD).7z' -O ./instdisc.7z |
 
 wget 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O ./iew95.iso &&
 
