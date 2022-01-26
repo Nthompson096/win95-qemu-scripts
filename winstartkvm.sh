@@ -9,7 +9,7 @@
 	-vga cirrus \
 	-boot order=a \
 	-enable-kvm \
-        #-cdrom \
+        -cdrom instdisc.iso
 	#-drive file=,format=,index=0,if=floppy
 	
 	# comments
