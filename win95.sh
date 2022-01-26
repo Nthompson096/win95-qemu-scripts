@@ -8,6 +8,6 @@ qemu-system-i386 \
 	-cpu pentium \
 	-vga cirrus \
 	-fda disk01.img \
-	-cdrom windows95b.iso \
+	-cdrom instdisc.iso \
 	-boot a \
 	-soundhw pcspk 
