@@ -8,7 +8,7 @@
 	-cpu pentium \
 	-vga cirrus \
 	-boot order=a \
-        #-cdrom  \
+        -cdrom  instdisc.iso
 	#-drive file=,format=,index=0,if=floppy
 	
 	# comments
