@@ -14,7 +14,7 @@ When that is done enter `D:\SETUP` to launch setup; hit enter and continue and h
 # Basic Troubleshooting
 
 My install didn't download/install correctly, what should i do?
-The downloads should resume even if internet has been disconnected and it should continue with the download (otherwise the script will not execute). If there's other issues just run ./cleanup.sh and start again. If asked about overwriting files, enter `N` in terminal.
+The downloads should resume even if internet has been disconnected and it should continue with the download (otherwise the script will not execute). If asked about overwriting files, enter `N` in terminal. Just run ./start.sh as it will format the qcow image.
 
 I don't have QEMU installed, says command not found:
 
