@@ -111,12 +111,13 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type="file" device="disk">
       <driver name="qemu" type="qcow2"/>
-      <source file="/path/to/qemu.qcow2"/>
+      <source file="/home/nicholas/win95-2.5/win95.qcow2"/>
       <target dev="hda" bus="ide"/>
       <address type="drive" controller="0" bus="0" target="0" unit="0"/>
     </disk>
     <disk type="file" device="cdrom">
       <driver name="qemu" type="raw"/>
+      <source file="/home/nicholas/win95-2.5/instdisc.iso"/>
       <target dev="hdb" bus="ide"/>
       <readonly/>
       <address type="drive" controller="0" bus="0" target="0" unit="1"/>
@@ -143,12 +144,6 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
     <controller type="virtio-serial" index="0">
       <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x0"/>
     </controller>
-    <interface type="bridge">
-      <mac address="52:54:00:d9:59:0e"/>
-      <source bridge="bri"/>
-      <model type="e1000"/>
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x03" function="0x0"/>
-    </interface>
     <serial type="pty">
       <target type="isa-serial" port="0">
         <model name="isa-serial"/>
