@@ -65,6 +65,7 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
 <p>
 
   ```
+  
 <domain type="qemu">
   <name>win95</name>
   <uuid>03661694-395f-40f6-a9e4-8d567e5d987f</uuid>
@@ -108,9 +109,15 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type="file" device="disk">
       <driver name="qemu" type="qcow2"/>
-      <source file="/home/nicholas/win95-2.5/win95.qcow2"/>
+      <source file="/path/to/qemu.qcow2"/>
       <target dev="hda" bus="ide"/>
       <address type="drive" controller="0" bus="0" target="0" unit="0"/>
+    </disk>
+    <disk type="file" device="cdrom">
+      <driver name="qemu" type="raw"/>
+      <target dev="hdb" bus="ide"/>
+      <readonly/>
+      <address type="drive" controller="0" bus="0" target="0" unit="1"/>
     </disk>
     <controller type="usb" index="0" model="ich9-ehci1">
       <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x7"/>
