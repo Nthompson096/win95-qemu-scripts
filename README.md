@@ -65,19 +65,20 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
 <p>
 
   ```
-  <domain type="kvm">
+<domain type="qemu">
   <name>win95</name>
-  <uuid></uuid>
+  <uuid>03661694-395f-40f6-a9e4-8d567e5d987f</uuid>
   <metadata>
     <libosinfo:libosinfo xmlns:libosinfo="http://libosinfo.org/xmlns/libvirt/domain/1.0">
       <libosinfo:os id="http://microsoft.com/win/95"/>
     </libosinfo:libosinfo>
   </metadata>
-  <memory unit="KiB">65536</memory>
-  <currentMemory unit="KiB">65536</currentMemory>
+  <memory unit="KiB">524288</memory>
+  <currentMemory unit="KiB">524288</currentMemory>
   <vcpu placement="static">1</vcpu>
   <os>
-    <type arch="x86_64" machine="pc-i440fx-6.2">hvm</type>
+    <type arch="i686" machine="pc-i440fx-6.2">hvm</type>
+    <boot dev="hd"/>
   </os>
   <features>
     <acpi/>
@@ -107,52 +108,35 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type="file" device="disk">
       <driver name="qemu" type="qcow2"/>
-      <source file="path/to/w95.qcow"/>
+      <source file="/home/nicholas/win95-2.5/win95.qcow2"/>
       <target dev="hda" bus="ide"/>
-      <boot order="3"/>
-      <address type="drive" controller="0" bus="0" target="0" unit="0"/>
-    </disk>
-    <disk type="file" device="cdrom">
-      <driver name="qemu" type="raw"/>
-      <source file="path/to/iso"/>
-      <target dev="hdb" bus="ide"/>
-      <readonly/>
-      <boot order="2"/>
-      <address type="drive" controller="0" bus="0" target="0" unit="1"/>
-    </disk>
-    <disk type="file" device="floppy">
-      <driver name="qemu" type="raw"/>
-      <source file="path/to/floppy"/>
-      <target dev="fda" bus="fdc"/>
-      <boot order="1"/>
       <address type="drive" controller="0" bus="0" target="0" unit="0"/>
     </disk>
     <controller type="usb" index="0" model="ich9-ehci1">
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x7"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x7"/>
     </controller>
     <controller type="usb" index="0" model="ich9-uhci1">
       <master startport="0"/>
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x0" multifunction="on"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x0" multifunction="on"/>
     </controller>
     <controller type="usb" index="0" model="ich9-uhci2">
       <master startport="2"/>
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x1"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x1"/>
     </controller>
     <controller type="usb" index="0" model="ich9-uhci3">
       <master startport="4"/>
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x2"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x2"/>
     </controller>
     <controller type="pci" index="0" model="pci-root"/>
     <controller type="ide" index="0">
       <address type="pci" domain="0x0000" bus="0x00" slot="0x01" function="0x1"/>
     </controller>
     <controller type="virtio-serial" index="0">
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x06" function="0x0"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x0"/>
     </controller>
-    <controller type="fdc" index="0"/>
-    <interface type="network">
-      <mac address="52:54:00:89:13:61"/>
-      <source network="default"/>
+    <interface type="bridge">
+      <mac address="52:54:00:d9:59:0e"/>
+      <source bridge="bri"/>
       <model type="e1000"/>
       <address type="pci" domain="0x0000" bus="0x00" slot="0x03" function="0x0"/>
     </interface>
@@ -177,9 +161,7 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
       <listen type="address"/>
       <image compression="off"/>
     </graphics>
-    <sound model="ac97">
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x0"/>
-    </sound>
+    <sound model="sb16"/>
     <audio id="1" type="spice"/>
     <video>
       <model type="qxl" ram="65536" vram="65536" vgamem="16384" heads="1" primary="yes"/>
@@ -192,7 +174,7 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
       <address type="usb" bus="0" port="3"/>
     </redirdev>
     <memballoon model="virtio">
-      <address type="pci" domain="0x0000" bus="0x00" slot="0x07" function="0x0"/>
+      <address type="pci" domain="0x0000" bus="0x00" slot="0x06" function="0x0"/>
     </memballoon>
   </devices>
 </domain>
