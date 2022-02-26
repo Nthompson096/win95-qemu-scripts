@@ -55,6 +55,8 @@ After that is finished enter `./winstartnokvm.sh` in terminal.
 Sadly I have no idea what is causing this, like I said this OS is old so expect issues. Recently decided to remove 
 -soundhw sb16 in the scripts but you can readd it if you'd like; be warned I had issues with BSOD.
 
+Alternatively it would be best to just run the machine in virt-manager with the xml document I have provided below as it fixes the sound issue.
+
 There is a wiki for a work around however:
 
 https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
