@@ -177,7 +177,8 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
   <memballoon model="virtio">
     <address type="pci" domain="0x0000" bus="0x00" slot="0x06" function="0x0"/>
   </memballoon>
-</devices>
+ </devices>
+</domain>
 ```
 </p>
 </details>
