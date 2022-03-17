@@ -67,8 +67,6 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
 <p>
 
   ```
-  
-  <name>win95</name>
 <metadata>
   <libosinfo:libosinfo xmlns:libosinfo="http://libosinfo.org/xmlns/libvirt/domain/1.0">
     <libosinfo:os id="http://microsoft.com/win/95"/>
@@ -180,7 +178,6 @@ https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
     <address type="pci" domain="0x0000" bus="0x00" slot="0x06" function="0x0"/>
   </memballoon>
 </devices>
-
 ```
 </p>
 </details>
