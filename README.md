@@ -40,7 +40,7 @@ You need to go control panel and under network and add TCP/IP under `control pan
 
 UPDATE: Just connected to google search, was easy but most sites will crash on you; go to the icon named "the internet" and keep current settings, double click again and type in the url bar google.com. **DO NOT USE A MODEM OR ANYTHING ELSE**.
 
-# I created a virtual machine in virt-manager and there is no internet on my network!
+# I've created a virtual machine in virt-manager and there is no internet on my network!
 
 Fret not; seeing how this is a virtual environment you could create a shared linux hard drive that's seperate to your windows. Install the linux of your choice.
 <br /> `I use arch btw` <br />
