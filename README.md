@@ -38,6 +38,12 @@ First I would like to tell you KVM support on win95 is fincky; it doesn't shutof
 ### Guide on how to create virtual networking:
 You need to go control panel and under network and add TCP/IP under `control panel > network > add .. > Protocol > TCP/IP` and you should be set; you also need to change the setting the irq freq to 9 under `my computer > control panel > system > device manager > network adapters > double click on the network adapter and go to resources, and set the config manually (uncheck automatic settings), click change settings and set the value to 9`, hit ok, and ok again; reboot when prompted.
 
+# I created a virtual machine in virt-manager and there is no internet on my network!
+
+Fret not; seeing how this is a virtual environment you could create a shared linux hard drive that's seperate to your windows. Install the linux of your choice.
+\ `I use arch btw` \
+All jokes aside, choose what you are ok with and mount windows; you may also just use a live-CD instead.
+
 UPDATE: Just connected to google search, was easy but most sites will crash on you; go to the icon named "the internet" and keep current settings, double click again and type in the url bar google.com. **DO NOT USE A MODEM OR ANYTHING ELSE**.
 
 # Addtional Drivers 
