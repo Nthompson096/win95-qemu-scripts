@@ -3,7 +3,8 @@ booting and creating a windows 95 vm with shell scripts, a mostly automated proc
 
 ### To start/download these scripts
 
-You would simply go to your terminal of choice and enter git clone https://github.com/Nthompson096/win95-qemu-scripts.git and it should clone to the directory of your choice; enter cd `win95-qemu-scripts` to enter that directory. 
+You would simply go to your terminal of choice and enter git clone ``https://github.com/Nthompson096/win95-qemu-scripts.git`` 
+and it should clone to the directory of your choice; enter cd `win95-qemu-scripts` to enter that directory. 
 
 from there enter in the terminal enter ```chmod +x start.sh``` to make the installation script executable and then simply enter ``` ./start.sh ``` this will start scripts `windisc.sh` to create a disk image for win95, `win95.sh` to start the vm installation process and `winstartnokvm.sh` which will start win95 after the install; downloading the image will only take a few minutes depending on connection. If asked about overwriting any files, go ahead and enter `N` in terminal.
 
