@@ -64,133 +64,17 @@ Sadly I have no idea what is causing this, like I said this OS is old so expect 
 
 Alternatively it would be best to just run the machine in virt-manager with the xml document I have provided below as it fixes the sound issue; new issue is that the network will not work, but you can use the shell scripts provided to work around this.
 
-There is a wiki for a work around however:
-
-https://wiki.osdev.org/Sound_Blaster_16#QEMU_support
+[There is a wiki for a work around however.](https://wiki.osdev.org/Sound_Blaster_16#QEMU_support)
 
 # Bounus, creating the VM with virt-manager
 
-  <details><summary>w95 xml example.</summary>
-<p>
-
-  ```
-<metadata>
-  <libosinfo:libosinfo xmlns:libosinfo="http://libosinfo.org/xmlns/libvirt/domain/1.0">
-    <libosinfo:os id="http://microsoft.com/win/95"/>
-  </libosinfo:libosinfo>
-</metadata>
-<memory unit="KiB">524288</memory>
-<currentMemory unit="KiB">524288</currentMemory>
-<vcpu placement="static">1</vcpu>
-<os>
-  <type arch="i686" machine="pc-i440fx-6.2">hvm</type>
-  <boot dev="hd"/>
-</os>
-<features>
-  <acpi/>
-  <apic/>
-  <hyperv mode="custom">
-    <relaxed state="on"/>
-    <vapic state="on"/>
-    <spinlocks state="on" retries="8191"/>
-  </hyperv>
-  <vmport state="off"/>
-</features>
-<cpu mode="host-model" check="partial"/>
-<clock offset="localtime">
-  <timer name="rtc" tickpolicy="catchup"/>
-  <timer name="pit" tickpolicy="delay"/>
-  <timer name="hpet" present="no"/>
-  <timer name="hypervclock" present="yes"/>
-</clock>
-<on_poweroff>destroy</on_poweroff>
-<on_reboot>restart</on_reboot>
-<on_crash>destroy</on_crash>
-<pm>
-  <suspend-to-mem enabled="no"/>
-  <suspend-to-disk enabled="no"/>
-</pm>
-<devices>
-  <emulator>/usr/bin/qemu-system-x86_64</emulator>
-  <disk type="file" device="disk">
-    <driver name="qemu" type="qcow2"/>
-    <source file="/path/to/the/win95.qcow2"/>
-    <target dev="hda" bus="ide"/>
-    <address type="drive" controller="0" bus="0" target="0" unit="0"/>
-  </disk>
-  <disk type="file" device="cdrom">
-    <driver name="qemu" type="raw"/>
-    <source file="/path/to/the/instdisc.iso"/>
-    <target dev="hdb" bus="ide"/>
-    <readonly/>
-    <address type="drive" controller="0" bus="0" target="0" unit="1"/>
-  </disk>
-  <controller type="usb" index="0" model="ich9-ehci1">
-    <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x7"/>
-  </controller>
-  <controller type="usb" index="0" model="ich9-uhci1">
-    <master startport="0"/>
-    <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x0" multifunction="on"/>
-  </controller>
-  <controller type="usb" index="0" model="ich9-uhci2">
-    <master startport="2"/>
-    <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x1"/>
-  </controller>
-  <controller type="usb" index="0" model="ich9-uhci3">
-    <master startport="4"/>
-    <address type="pci" domain="0x0000" bus="0x00" slot="0x04" function="0x2"/>
-  </controller>
-  <controller type="pci" index="0" model="pci-root"/>
-  <controller type="ide" index="0">
-    <address type="pci" domain="0x0000" bus="0x00" slot="0x01" function="0x1"/>
-  </controller>
-  <controller type="virtio-serial" index="0">
-    <address type="pci" domain="0x0000" bus="0x00" slot="0x05" function="0x0"/>
-  </controller>
-  <serial type="pty">
-    <target type="isa-serial" port="0">
-      <model name="isa-serial"/>
-    </target>
-  </serial>
-  <console type="pty">
-    <target type="serial" port="0"/>
-  </console>
-  <channel type="spicevmc">
-    <target type="virtio" name="com.redhat.spice.0"/>
-    <address type="virtio-serial" controller="0" bus="0" port="1"/>
-  </channel>
-  <input type="tablet" bus="usb">
-    <address type="usb" bus="0" port="1"/>
-  </input>
-  <input type="mouse" bus="ps2"/>
-  <input type="keyboard" bus="ps2"/>
-  <graphics type="spice" autoport="yes">
-    <listen type="address"/>
-    <image compression="off"/>
-  </graphics>
-  <sound model="sb16"/>
-  <audio id="1" type="spice"/>
-<video>
-<model type="cirrus" vram="16384" heads="1" primary="yes"/>
-<alias name="video0"/>
-<address type="pci" domain="0x0000" bus="0x00" slot="0x02" function="0x0"/>
-</video>
-  <redirdev bus="usb" type="spicevmc">
-    <address type="usb" bus="0" port="2"/>
-  </redirdev>
-  <redirdev bus="usb" type="spicevmc">
-    <address type="usb" bus="0" port="3"/>
-  </redirdev>
-  <memballoon model="virtio">
-    <address type="pci" domain="0x0000" bus="0x00" slot="0x06" function="0x0"/>
-  </memballoon>
- </devices>
-</domain>
-```
-</p>
-</details>
+[the example XML document hosted inside this git; it's TL:DR](https://raw.githubusercontent.com/Nthompson096/win95-qemu-scripts/main/example-win95.xml)
 
 
-The XML document above can be used to create a virtual machine with virt-manager, you can also use the existng image you created with the terminal to create your win96 virtual machine; I wouldn't advise on touching the UUID, just touch the `<domain type="">` and change it to `qemu`. If you want to do stuff purely on terminal you would need to install a program named FIXCPU95.
+The XML document above can be used to create a virtual for virt-manager; be sure to set the flag to <br /> `<domain type="qemu">` at the start of the xml document. You could've also instead cloned the created virtual w95 file and create a new install with virt-manager or use the exisitng image. You would need to install a program named FIXCPU95, just use the floppy if doing everything by the command line. Also be sure to copy paste everything after UUID or adjust the values if needed.
 
-http://lonecrusader.x10host.com/fix95cpu.html; however this fix is now on this github repository and will only be needed if you are having issues (fast CPU under KVM).
+[lonecrusader fix95cpu](http://lonecrusader.x10host.com/fix95cpu.html); however this fix is now on this github repository and will only be needed if you are having issues (fast CPU under KVM).
+
+# EoF:
+
+Thank you for checking out this repoisitory, be sure to star it if you ever find this useful.
