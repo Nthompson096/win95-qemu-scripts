@@ -1,6 +1,8 @@
 # win95-qemu
 booting and creating a windows 95 vm with shell scripts, a mostly automated processes for qemu; linux only.
 
+[for a better / more verbose guide on which linux to use; watch this vid from SOG here](https://youtu.be/d12aGhsjBlo?t=447)
+
 ### To start/download these scripts
 
 You would simply go to your terminal of choice and enter git clone ``https://github.com/Nthompson096/win95-qemu-scripts.git`` 
@@ -74,8 +76,6 @@ Alternatively it would be best to just run the machine in virt-manager with the 
 The XML document above can be used to create a virtual for virt-manager; be sure to set the flag to <br /> `<domain type="qemu">` at the start of the xml document. You could've also instead cloned the created virtual w95 file and create a new install with virt-manager or use the exisitng image. You would need to install a program named FIXCPU95, just use the floppy if doing everything by the command line. Also be sure to copy paste everything after UUID or adjust the values if needed.
 
 [lonecrusader fix95cpu](http://lonecrusader.x10host.com/fix95cpu.html); however this fix is now on this github repository and will only be needed if you are having issues (fast CPU under KVM).
-
-[for a better / more verbose guide on which linux to use; watch this vid from SOG here](https://youtu.be/d12aGhsjBlo?t=447)
 
 # EoF:
 
