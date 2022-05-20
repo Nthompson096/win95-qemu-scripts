@@ -75,6 +75,8 @@ The XML document above can be used to create a virtual for virt-manager; be sure
 
 [lonecrusader fix95cpu](http://lonecrusader.x10host.com/fix95cpu.html); however this fix is now on this github repository and will only be needed if you are having issues (fast CPU under KVM).
 
+[for a better / more verbose guide on which linux to use; watch this vid from SOG here](https://youtu.be/d12aGhsjBlo?t=447)
+
 # EoF:
 
 Thank you for checking out this repoisitory, be sure to star it if you ever find this useful.
