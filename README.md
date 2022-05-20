@@ -1,8 +1,6 @@
 # win95-qemu
 booting and creating a windows 95 vm with shell scripts, a mostly automated processes for qemu; linux only.
 
-[for a better / more verbose guide on which linux to use; watch this vid from SOG here](https://youtu.be/d12aGhsjBlo?t=447)
-
 ### To start/download these scripts
 
 You would simply go to your terminal of choice and enter git clone ``https://github.com/Nthompson096/win95-qemu-scripts.git`` 
