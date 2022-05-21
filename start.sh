@@ -1,13 +1,11 @@
 #!/bin/sh
 
-#Are you sudo?
+#Are you root?
 
 	if [[ "$EUID" -ne 0 ]];
 	  then echo "Please run sudo."
 		    exit
-	else 
-	 if [[ "$EUID" -ne 1 ]];
-	  then echo "Copying everyting to user share."
+else
 
 #Check if there's a dir, if there is; I will create a dir and copy files, if not skip.
 
@@ -62,7 +60,6 @@ if [[ ! -f /usr/share/win95/ie95.iso ]]; then
 
 	if [[ -f /usr/bin/win95kvm ]]; then
 		echo "skipping KVM shortcuts for windows 95"
-fi
 fi
 fi
 fi
