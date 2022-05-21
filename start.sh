@@ -22,9 +22,14 @@ cp ./* /usr/share/win95
 	
 	if  [[ -f /usr/share/win95/ie95.iso ]]; then 
 			#/usr/share/win95/ie95.iso
-			echo "grabbing ie 95" && 
-			wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso 2> /dev/null
+			echo "Redownload IE-95?"
 
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) wget 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso; break;;
+        No ) break;;
+    esac
+done
 	
 
 #else if doesn't work, try elif, no doesn't work... hmmm, else works..
