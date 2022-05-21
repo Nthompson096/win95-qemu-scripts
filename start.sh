@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#Are you root?
+#Are you sudo?
 
 	if [[ "$EUID" -ne 0 ]];
 	  then echo "Please run sudo."
