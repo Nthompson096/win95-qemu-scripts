@@ -47,7 +47,7 @@ select yn in "Yes" "No"; do
     esac
 done
 
-#Will format even if not missing...
+#Will format even if not missing, upodate will ask you.
 
 	if [[ ! -f /var/lib/libvirt/images/win95.qcow2 ]]; then
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
