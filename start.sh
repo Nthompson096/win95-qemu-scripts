@@ -34,12 +34,17 @@ mkdir /usr/share/win95 2> /dev/null && chmod +x ./*.sh && cp ./* /usr/share/win9
 #else if doesn't work, try elif, no doesn't work... hmmm, else works..
 
 	 [[ ! -f /usr/share/win95/instdisc.iso ]]; #then
-		#touch  /usr/share/win95/instdisc.iso
 		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso
 	
 	 if [[ -f /usr/share/win95/instdisc.iso ]]; then
-		#touch  /usr/share/win95/instdisc.iso
-		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso 2> /dev/null
+		echo "file exists, replace?"
+
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) wget 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso; break;;
+        No ) break;;
+    esac
+done
 
 #Will format even if not missing...
 
@@ -47,7 +52,15 @@ mkdir /usr/share/win95 2> /dev/null && chmod +x ./*.sh && cp ./* /usr/share/win9
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && echo -e "\n\n\n\n" && cat /usr/share/win95/key.txt && echo -e "\n\n\n\n" && ./win95.sh && ./win95.sh && /usr/share/win95/winstartnokvm.sh
 
 	else [[ -f /var/lib/libvirt/images/win95.qcow2 ]]; #then
-		echo "Win95 HDD exists, restarting install" &&  qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && echo -e "\n\n\n\n" && cat /usr/share/win95/key.txt && echo -e "\n\n\n\n" && ./win95.sh  && ./win95.sh && /usr/share/win95/winstartnokvm.sh
+		# echo "Win95 HDD exists, restart install?" &&  qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && echo -e "\n\n\n\n" && cat /usr/share/win95/key.txt && echo -e "\n\n\n\n" && ./win95.sh  && ./win95.sh && /usr/share/win95/winstartnokvm.sh
+		echo "Win95 HDD exists, format virtual drive?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && echo -e "\n\n\n\n" && cat /usr/share/win95/key.txt && echo -e "\n\n\n\n" && ./win95.sh  && ./win95.sh && /usr/share/win95/winstartnokvm.sh; break;;
+        No ) cat /usr/share/win95/key.txt && echo -e "\n\n\n\n" && ./win95.sh  && ./win95.sh && /usr/share/win95/winstartnokvm.sh; break;;
+    esac
+done
+
 
 	if  [[ ! -f /usr/bin/win95nokvm ]]; then
 		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -s /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm
@@ -67,3 +80,10 @@ fi
 fi
 fi
 fi
+#fi
+#fi
+#fi
+#fi
+#fi
+#fi
+#fi
