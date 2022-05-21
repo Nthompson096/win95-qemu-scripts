@@ -60,7 +60,7 @@ After that is finished enter `./winstartnokvm.sh` in terminal.
 # Sound is choppy, there is no sound.
 
 Sadly I have no idea what is causing this, like I said this OS is old so expect issues. Recently decided to remove 
--soundhw sb16 in the scripts but you can readd it if you'd like; be warned I had issues with BSOD.
+-soundhw sb16 in the scripts but you can re-add it if you'd like; be warned I had issues with BSOD.
 
 Alternatively it would be best to just run the machine in virt-manager with the xml document I have provided below as it fixes the sound issue; new issue is that the network will not work, but you can use the shell scripts provided to work around this.
 
