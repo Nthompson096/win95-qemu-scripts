@@ -30,7 +30,7 @@ if [[ ! -f /usr/share/win95/ie95.iso ]]; then
 			echo "grabbing ie 95" && wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso
 
 	if [[ ! -f /usr/share/win95/instdisc.iso ]]; then
-		wget -c 'https://archive.org/download/X03-56247/Microsoft%20Windows%2095C%20%284.03.1216%29%20%28OSR2.5%29%20%2811-26-1997%29%20%28US-English%29.iso' -O /usr/share/win95/instdisc.iso
+		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso
 	else
 	
 	if [[ -f /usr/share/win95/instdisc.iso ]]; then
