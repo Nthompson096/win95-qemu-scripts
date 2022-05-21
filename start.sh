@@ -5,14 +5,16 @@
 	if [[ "$EUID" -ne 0 ]];
 	  then echo "Please run sudo."
 		    exit
-else
 
 #Check if there's a dir, if there is; I will create a dir and copy files, if not skip.
 
-	if [[ ! -d /usr/share/win95 ]]; then
-		mkdir /usr/share/win95 && chmod +x ./*.sh && cp ./* /usr/share/win95
+	elif [[ ! -d /usr/share/win95 ]]; then
+		mkdir /usr/share/win95 && chmod +x ./*.sh && cp ./* /usr/share/win95 
 
-	else
+		echo -e "\n\n\n\n" & 
+		echo "creating moving everything to /usr/share/win95"
+
+#	else
 
 	if [[ -d /usr/share/win95 ]]; then
 		echo "skipping dir"
@@ -72,4 +74,4 @@ fi
 fi
 fi
 fi
-fi
+#fi
