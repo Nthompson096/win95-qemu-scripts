@@ -34,7 +34,7 @@ if [[ ! -f /usr/share/win95/ie95.iso ]]; then
 	else
 	
 	if [[ -f /usr/share/win95/instdisc.iso ]]; then
-		wget -c 'https://archive.org/download/X03-56247/Microsoft%20Windows%2095C%20%284.03.1216%29%20%28OSR2.5%29%20%2811-26-1997%29%20%28US-English%29.iso' -O /usr/share/win95/instdisc.iso
+		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso
 
 #Will format even if missing...
 
