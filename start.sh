@@ -71,7 +71,7 @@ select yn in "Yes" "No"; do
 		./win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
 
-		No ) echo; break;;
+		No ) break;;
 	esac
 done
 
@@ -85,7 +85,7 @@ select yn in "Yes" "No"; do
 		./win95.sh  && 
 		./win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
-        No )  echo "ok, carry on"; break;;
+        No )  break;;
     esac
 done
 
