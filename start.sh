@@ -11,8 +11,7 @@ else
 [[ ! -d /usr/share/win95 ]]
 mkdir /usr/share/win95 2> /dev/null && 
 chmod +x ./*.sh &&
-cp ./* /usr/share/win95/ &
-cp ./*.sh -u /usr/share/win95/
+cp ./* -u /usr/share/win95/ &
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
  
