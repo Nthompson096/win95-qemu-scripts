@@ -67,7 +67,7 @@ select yn in "Yes" "No"; do
         Yes ) qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
 		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && 
 		echo -e "\n\n\n\n" && 
-		cat /usr/share/win95/key.txt | 
+		cat /usr/share/win95/key.txt ||
 		echo -e "\n\n\n\n" && 
 		./win95.sh  && 
 		./win95.sh && 
@@ -82,7 +82,7 @@ echo "Are you trying to continue an install"
 select yn in "Yes" "No"; do
     case $yn in
  		
- 		Yes ) cat /usr/share/win95/key.txt |
+ 		Yes ) cat /usr/share/win95/key.txt ||
 		echo -e "\n\n\n\n" && 
 		./win95.sh  && 
 		./win95.sh && 
