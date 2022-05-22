@@ -76,6 +76,7 @@ echo "Are you trying to continue an install"
 
 select yn in "Yes" "No"; do
     case $yn in
+ 		
  		Yes ) cat /usr/share/win95/key.txt &
 		/usr/share/win95/win95.sh 2> /dev/null && 
 		/usr/share/win95/winstartnokvm.sh 2> /dev/null; break;;
