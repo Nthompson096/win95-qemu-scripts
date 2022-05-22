@@ -51,8 +51,8 @@ done
 
 	if [[ ! -f /var/lib/libvirt/images/win95.qcow2 ]]; then
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
-		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && 
-		cat /usr/share/win95/key.txt ||
+		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 |& 
+		cat /usr/share/win95/key.txt |&
 		 /usr/share/win95/win95.sh && 
 		 /usr/share/win95/win95.sh && 
 		 /usr/share/win95/winstartnokvm.sh
@@ -62,11 +62,11 @@ done
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
-		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && 
-		cat /usr/share/win95/key.txt ||
+		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 |& 
+		cat /usr/share/win95/key.txt |&
 		/usr/share/win95/win95.sh  && 
-		/usr/share/win95/win95.sh && 
-		/usr/share/win95/winstartnokvm.sh; break;;
+		/usr/share/win95/win95.sh &&
+		/usr/share/win95/winstartnokvm.sh break;;
 
 		No ) break;;
 	esac
@@ -77,7 +77,7 @@ echo "Are you trying to continue an install"
 select yn in "Yes" "No"; do
     case $yn in
  		
- 		Yes ) cat /usr/share/win95/key.txt ||
+ 		Yes ) cat /usr/share/win95/key.txt |&
 		/usr/share/win95/win95.sh  && 
 		/usr/share/win95/win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
