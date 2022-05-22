@@ -24,6 +24,9 @@ The downloads should resume even if internet has been disconnected and it should
 
 *If anything else fails, just reinstall.*
 
+***UPDATE:***
+for additonal drivers or a reinstall, just run the inst95 as sudo inside terminal after the inital.
+
 ## I don't have QEMU installed, says command not found:
 
 You will have to install qemu with package manager/linux flavor of your choice; 
