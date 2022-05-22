@@ -53,9 +53,7 @@ done
 	if [[ ! -f /var/lib/libvirt/images/win95.qcow2 ]]; then
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
 		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && 
-		echo -e "\n\n\n\n" && 
-		cat /usr/share/win95/key.txt | 
-		echo -e "\n\n\n\n" &&
+		cat /usr/share/win95/key.txt ||
 		 ./win95.sh && 
 		 ./win95.sh && 
 		 /usr/share/win95/winstartnokvm.sh
@@ -66,9 +64,7 @@ select yn in "Yes" "No"; do
     case $yn in
         Yes ) qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
 		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && 
-		echo -e "\n\n\n\n" && 
 		cat /usr/share/win95/key.txt ||
-		echo -e "\n\n\n\n" && 
 		./win95.sh  && 
 		./win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
@@ -83,7 +79,6 @@ select yn in "Yes" "No"; do
     case $yn in
  		
  		Yes ) cat /usr/share/win95/key.txt ||
-		echo -e "\n\n\n\n" && 
 		./win95.sh  && 
 		./win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
