@@ -99,7 +99,14 @@ done
 	else [[ -f /usr/bin/win95kvm ]]; #then
 		echo "skipping KVM shortcuts for windows 95"
 
+			if [[ ! -f /usr/bin/uninst95 ]]; then
+		echo "Creating the uninstall terminal shortcut." && ln -s /usr/share/win95/uninst95.sh /usr/bin/uninst95
 
+	else [[ -f /usr/bin/uninst95 ]]; #then
+		echo "skipping the uninstall terminal shortcut."
+
+
+fi
 fi
 fi
 fi
