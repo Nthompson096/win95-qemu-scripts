@@ -89,24 +89,24 @@ select yn in "Yes" "No"; do
     esac
 done
 
-	if  [[ ! -f /usr/bin/win95nokvm ]]; then
-		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -s /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm
+	if  [[ ! -f /usr/bin/win95nokvm ]]
+		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -sf /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm 
 
-	 else [[ -f /usr/bin/win95nokvm ]]
-		 echo "skipping nokvm shortcuts"
+	  [[ -f /usr/bin/win95nokvm ]]; then
+		 echo "Created no KVM shotcuts"
 
 
-	if [[ ! -f /usr/bin/win95kvm ]]; then
-		echo "Creating KVM shortcuts for win 95" && ln -s /usr/share/win95/winstartkvm.sh /usr/bin/win95kvm
+	if [[ ! -f /usr/bin/win95kvm ]]
+		echo "Creating KVM shortcuts for win 95" && ln -sf /usr/share/win95/winstartkvm.sh /usr/bin/win95kvm 
 
-	else [[ -f /usr/bin/win95kvm ]]
-		echo "skipping KVM shortcuts for windows 95"
+	 [[ -f /usr/bin/win95kvm ]]; then
+		echo "Created KVM shortcuts for windows 95"
 
-	if [[ ! -f /usr/bin/uninst95 ]]; then
-		echo "Creating the uninstall terminal shortcut." && ln -s /usr/share/win95/uninst95.sh /usr/bin/uninst95
+	if [[ ! -f /usr/bin/uninst95 ]]
+		echo "Creating the uninstall terminal shortcut." && ln -sf /usr/share/win95/uninst95.sh /usr/bin/uninst95 
 
-	 else [[ -f /usr/bin/uninst95 ]];
-		echo "skipping the uninstall terminal shortcut."
+	   [[ -f /usr/bin/uninst95 ]]; then
+		echo "Created the uninstall terminal shortcut."
 
 
 fi
@@ -118,7 +118,6 @@ fi
 fi
 
 echo "want to install additonal drivers for windows 95?"
-#read input
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) /usr/share/win95/ie95.sh ; break;;
