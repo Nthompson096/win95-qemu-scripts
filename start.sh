@@ -86,15 +86,6 @@ select yn in "Yes" "No"; do
     esac
 done
 
-echo "want to install additonal drivers for windows 95?"
-#read input
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) /usr/share/win95/ie95.sh ; break;;
-        No ) exit;;
-    esac
-done
-
 	if  [[ ! -f /usr/bin/win95nokvm ]]; then
 		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -s /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm
 
@@ -115,3 +106,12 @@ fi
 fi
 fi
 fi
+
+echo "want to install additonal drivers for windows 95?"
+#read input
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) /usr/share/win95/ie95.sh ; break;;
+        No ) exit;;
+    esac
+done
