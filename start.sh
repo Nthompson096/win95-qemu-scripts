@@ -8,10 +8,11 @@
 else
 #Check if there's a dir, if there is; I will create a dir and copy files, if not skip.	
 
-[[ ! -d /usr/share/win95 ]] 
+[[ ! -d /usr/share/win95 ]]
 mkdir /usr/share/win95 2> /dev/null && 
-chmod +x ./*.sh && 
-cp ./* /usr/share/win95 
+chmod +x ./*.sh &&
+cp ./* /usr/share/win95/ &
+cp ./*.sh -u /usr/share/win95/
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
  
@@ -19,7 +20,7 @@ cp ./* /usr/share/win95
 #touch /usr/share/win95/ie95.iso
 	echo "grabbing ie 95" && 
 	wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso
-	
+
 	if  [[ -f /usr/share/win95/ie95.iso ]]; then 
 			#/usr/share/win95/ie95.iso
 			echo "Redownload IE-95?"
@@ -38,7 +39,7 @@ done
 		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso
 	
 	 if [[ -f /usr/share/win95/instdisc.iso ]]; then
-		echo "file exists, replace?"
+		echo "instdisc.iso file exists, replace?"
 
 select yn in "Yes" "No"; do
     case $yn in
@@ -47,7 +48,7 @@ select yn in "Yes" "No"; do
     esac
 done
 
-#Will format even if not missing, upodate will ask you.
+#Will format even if not missing...
 
 	if [[ ! -f /var/lib/libvirt/images/win95.qcow2 ]]; then
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
@@ -69,14 +70,30 @@ select yn in "Yes" "No"; do
 		./win95.sh  && 
 		./win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
-        No ) cat /usr/share/win95/key.txt && 
+		No ) echo "Are you trying to continue an install"; break;;
+    esac
+done
+
+select yn in "Yes" "No"; do
+    case $yn in
+ 		
+ 		Yes ) cat /usr/share/win95/key.txt && 
 		echo -e "\n\n\n\n" && 
 		./win95.sh  && 
 		./win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
+        No )  echo "ok, carry on"; break;;
     esac
 done
 
+echo "want to install additonal drivers for windows 95?"
+#read input
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) /usr/share/win95/ie95.sh ; break;;
+        No ) exit;;
+    esac
+done
 
 	if  [[ ! -f /usr/bin/win95nokvm ]]; then
 		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -s /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm
@@ -90,6 +107,8 @@ done
 
 	else [[ -f /usr/bin/win95kvm ]]; #then
 		echo "skipping KVM shortcuts for windows 95"
+
+
 fi
 fi
 fi

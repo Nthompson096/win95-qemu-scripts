@@ -6,5 +6,5 @@
 	-cpu pentium \
 	-vga cirrus \
 	-rtc base=localtime \
-	-drive file=win95.qcow2,format=qcow2 \
-	-drive file=FIX95CPU.IMA,format=raw,index=0,if=floppy \
+	-drive file=/var/lib/libvirt/images/win95.qcow2,format=qcow2 \
+	-drive file=/usr/share/win95/FIX95CPU.IMA,format=raw,index=0,if=floppy 
