@@ -12,7 +12,7 @@ In the command prompt hit enter for the current selection and then enter `fdisk`
 
 When that is done enter `D:\SETUP` to launch setup; hit enter and continue and hit yes, keep the default install location (C:\) and enter typical, hit next for where it will ask for your cd-key, in the same terminal you should see your product key; if not in another terminal enter `cat key.txt` to view a working cd key for win95 and enter what has been displayed. enter your username and company (optional) and check all the boxes when prompted (network and sound), install the click on typical, click continue, and enter a computer name or click next. don't use a startup cd for this setup when asked and it will copy all the files into the VM. Hit next when everything is finished. When all is done click next for the startup then hit finish and then hit quit in the qemu menu under machine > quit (alt-m) or ctrl-alt-g and select machine > quit. after all the files have been copied into the VM the machine will start for you, it will copy programs, etc inside the vm it will also ask from a username and password, you don't have to enter anything for the password. Be sure to hit on cancel when prompted about adding a local or network printer. you may restart your windows 95 install with wininst at any time after you are done.
 
-also if asked about continuing an install at anytime and this is your first install, press `2`.
+also if asked about continuing an install at anytime and this is your first install, press `2`; if you're having installing the script after cloinging this repo, be sure that there's no win95 dir inside `/usr/share`; if there is remove it with rm -r example `rm -r /usr/share/win95` and try again.
 
 # Basic Troubleshooting
 
