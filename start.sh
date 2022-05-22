@@ -48,7 +48,7 @@ select yn in "Yes" "No"; do
     esac
 done
 
-#Will format even if not missing...
+#Will create the new drive.
 
 	if [[ ! -f /var/lib/libvirt/images/win95.qcow2 ]]; then
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
@@ -70,9 +70,12 @@ select yn in "Yes" "No"; do
 		./win95.sh  && 
 		./win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
-		No ) echo "Are you trying to continue an install"; break;;
-    esac
+
+		No ) echo; break;;
+	esac
 done
+
+echo "Are you trying to continue an install"
 
 select yn in "Yes" "No"; do
     case $yn in
@@ -89,20 +92,20 @@ done
 	if  [[ ! -f /usr/bin/win95nokvm ]]; then
 		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -s /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm
 
-	else [[ -f /usr/bin/win95nokvm ]]; #then
+	 else [[ -f /usr/bin/win95nokvm ]]
 		 echo "skipping nokvm shortcuts"
 
 
 	if [[ ! -f /usr/bin/win95kvm ]]; then
 		echo "Creating KVM shortcuts for win 95" && ln -s /usr/share/win95/winstartkvm.sh /usr/bin/win95kvm
 
-	else [[ -f /usr/bin/win95kvm ]]; #then
+	else [[ -f /usr/bin/win95kvm ]]
 		echo "skipping KVM shortcuts for windows 95"
 
-			if [[ ! -f /usr/bin/uninst95 ]]; then
+	if [[ ! -f /usr/bin/uninst95 ]]; then
 		echo "Creating the uninstall terminal shortcut." && ln -s /usr/share/win95/uninst95.sh /usr/bin/uninst95
 
-	else [[ -f /usr/bin/uninst95 ]]; #then
+	 else [[ -f /usr/bin/uninst95 ]];
 		echo "skipping the uninstall terminal shortcut."
 
 
