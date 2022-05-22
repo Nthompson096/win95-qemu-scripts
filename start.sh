@@ -103,7 +103,13 @@ done
 	   [[ -f /usr/bin/uninst95 ]]; then
 		echo "Created the uninstall terminal shortcut."
 
+		if [[ ! -f /usr/bin/inst95 ]]
+		echo "Creating the install terminal shortcut." && ln -sf /usr/share/win95/start.sh /usr/bin/inst95
 
+	   [[ -f /usr/bin/inst95 ]]; then
+		echo "Created the install terminal shortcut."
+
+fi
 fi
 fi
 fi
