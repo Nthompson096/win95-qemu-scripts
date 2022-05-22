@@ -53,8 +53,8 @@ done
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
 		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && 
 		cat /usr/share/win95/key.txt ||
-		 ./win95.sh && 
-		 ./win95.sh && 
+		 /usr/share/win95/win95.sh && 
+		 /usr/share/win95/win95.sh && 
 		 /usr/share/win95/winstartnokvm.sh
 
 	else [[ -f /var/lib/libvirt/images/win95.qcow2 ]]; #then
@@ -64,8 +64,8 @@ select yn in "Yes" "No"; do
         Yes ) qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
 		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 && 
 		cat /usr/share/win95/key.txt ||
-		./win95.sh  && 
-		./win95.sh && 
+		/usr/share/win95/win95.sh  && 
+		/usr/share/win95/win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
 
 		No ) break;;
@@ -78,8 +78,8 @@ select yn in "Yes" "No"; do
     case $yn in
  		
  		Yes ) cat /usr/share/win95/key.txt ||
-		./win95.sh  && 
-		./win95.sh && 
+		/usr/share/win95/win95.sh  && 
+		/usr/share/win95/win95.sh && 
 		/usr/share/win95/winstartnokvm.sh; break;;
         No )  break;;
     esac
