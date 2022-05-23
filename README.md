@@ -1,6 +1,8 @@
 # win95-qemu
 booting and creating a windows 95 vm with shell scripts, a mostly automated processes for qemu; linux only.
 
+## ***I would highly recommend virt-manager for now; if using a different distro other than arch-based***
+
 ### To start download these scripts
 
 You would simply go to your terminal of choice and enter git clone `https://github.com/Nthompson096/win95-qemu-scripts.git` 
@@ -51,8 +53,6 @@ UPDATE: Just connected to google search, was easy but most sites will crash on y
 Fret not; seeing how this is a virtual environment you could create a shared linux hard drive that's seperate to your windows. Install the linux of your choice.
 <br/>`I use arch btw`<br/>
 All jokes aside, choose what you are ok with and mount windows; you may also just use a live-CD instead.
-
-## ***I would highly recommend virt-manager for now; if using a different distro other than arch-based***
 
 # Addtional Drivers 
 
