@@ -28,8 +28,7 @@ for additonal drivers or a reinstall, just run the inst95 as sudo inside termina
 
 You will have to install qemu with package manager/linux flavor of your choice; 
 1) for me it would be `sudo pacman -S qemu` this would be arch or manjaro.
-2) For ubuntu or debian based linux it would be `sudo apt install qemu`
-3) for fedora or redhat based linux it would be `sudo dnf install qemu`
+2) So far this script works for arch based linux.
 These would be prime examples.
 
 
