@@ -31,8 +31,6 @@ for additonal drivers or a reinstall, just run the inst95 as sudo inside termina
 You will have to install qemu with package manager/linux flavor of your choice; 
 1) for me it would be `sudo pacman -S qemu` this would be arch or manjaro.
 2) So far this script works for arch based linux.
-These would be prime examples.
-
 
 # I want KVM support, but how can i do this?
 
