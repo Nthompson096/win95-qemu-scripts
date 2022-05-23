@@ -52,7 +52,7 @@ Fret not; seeing how this is a virtual environment you could create a shared lin
 <br/>`I use arch btw`<br/>
 All jokes aside, choose what you are ok with and mount windows; you may also just use a live-CD instead.
 
-## ***I would highly recommend virt-manager for now; to use virt-manager if using a different distro other than arch-based***
+## ***I would highly recommend virt-manager for now; if using a different distro other than arch-based***
 
 # Addtional Drivers 
 
