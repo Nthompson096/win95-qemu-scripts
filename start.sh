@@ -6,12 +6,38 @@
 	  then echo "Please run sudo."
 		    exit
 else
-#Check if there's a dir, if there is; I will create a dir and copy files, if not skip.	
+#Check if there's a dir, if there is; I will create a dir and copy files, if not skip.
+#Create shortcuts when launched.
 
 [[ ! -d /usr/share/win95 ]]
 mkdir /usr/share/win95 2> /dev/null && 
 chmod +x ./*.sh &&
 cp ./* -u /usr/share/win95/ &
+
+	if [[ ! -f /usr/bin/win95nokvm ]]
+		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -sf /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm 
+
+	  [[ -f /usr/bin/win95nokvm ]]; then
+		 echo "Created no KVM shotcuts"
+
+
+	if [[ ! -f /usr/bin/win95kvm ]]
+		echo "Creating KVM shortcuts for win 95" && ln -sf /usr/share/win95/winstartkvm.sh /usr/bin/win95kvm 
+
+	 [[ -f /usr/bin/win95kvm ]]; then
+		echo "Created KVM shortcuts for windows 95"
+
+	if [[ ! -f /usr/bin/uninst95 ]]
+		echo "Creating the uninstall terminal shortcut." && ln -sf /usr/share/win95/uninst95.sh /usr/bin/uninst95 
+
+	   [[ -f /usr/bin/uninst95 ]]; then
+		echo "Created the uninstall terminal shortcut."
+
+		if [[ ! -f /usr/bin/inst95 ]]
+		echo "Creating the install terminal shortcut." && ln -sf /usr/share/win95/start.sh /usr/bin/inst95
+
+	   [[ -f /usr/bin/inst95 ]]; then
+		echo "Created the install terminal shortcut."
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
  
@@ -83,31 +109,6 @@ select yn in "Yes" "No"; do
         No )  break;;
     esac
 done
-
-	if [[ ! -f /usr/bin/win95nokvm ]]
-		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -sf /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm 
-
-	  [[ -f /usr/bin/win95nokvm ]]; then
-		 echo "Created no KVM shotcuts"
-
-
-	if [[ ! -f /usr/bin/win95kvm ]]
-		echo "Creating KVM shortcuts for win 95" && ln -sf /usr/share/win95/winstartkvm.sh /usr/bin/win95kvm 
-
-	 [[ -f /usr/bin/win95kvm ]]; then
-		echo "Created KVM shortcuts for windows 95"
-
-	if [[ ! -f /usr/bin/uninst95 ]]
-		echo "Creating the uninstall terminal shortcut." && ln -sf /usr/share/win95/uninst95.sh /usr/bin/uninst95 
-
-	   [[ -f /usr/bin/uninst95 ]]; then
-		echo "Created the uninstall terminal shortcut."
-
-		if [[ ! -f /usr/bin/inst95 ]]
-		echo "Creating the install terminal shortcut." && ln -sf /usr/share/win95/start.sh /usr/bin/inst95
-
-	   [[ -f /usr/bin/inst95 ]]; then
-		echo "Created the install terminal shortcut."
 
 fi
 fi
