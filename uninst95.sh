@@ -11,7 +11,9 @@ fi
 echo "Are you sure you want to completely remove windows 95?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) rm /usr/bin/win95kvm && rm /usr/bin/win95nokvm && rm /var/lib/libvirt/images/win95.qcow2 && echo "win95 uninstalled." && rm /usr/bin/uninst95 && rm -r /usr/share/win95/; break;;
+        Yes ) echo "removing virtual win95" && ./remw95.sh; exit;;
         No ) exit;;
     esac
 done
+
+#echo "win95 uninstalled."
