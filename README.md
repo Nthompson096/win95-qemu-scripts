@@ -29,8 +29,8 @@ for additonal drivers or a reinstall, just run the inst95 as sudo inside termina
 ## I don't have QEMU installed, says command not found:
 
 You will have to install qemu with package manager/linux flavor of your choice; 
-1) for me it would be `sudo pacman -S qemu` this would be arch or manjaro; also be sure to install qemu-full.
-2) So far this script works for arch based linux.
+1) for me it would be `sudo pacman -S qemu` this would be arch or manjaro; also be sure to install qemu-full; if having issues with manjaro be sure to update then install.
+3) So far this script works for arch based linux.
 
 # I want KVM support, but how can i do this?
 
