@@ -68,7 +68,7 @@ if [[ -f /usr/share/win95/ie95.iso ]]; then
 		 /usr/share/win95/win95.sh 2> /dev/null &&  
 		 /usr/share/win95/winstartnokvm.sh 2> /dev/null
 
-	else [[ -f /var/lib/libvirt/images/win95.qcow2 ]]; #then
+	[[ -f /var/lib/libvirt/images/win95.qcow2 ]]
 		echo "Win95 HDD exists, format virtual drive?"
 select yn in "Yes" "No"; do
     case $yn in
