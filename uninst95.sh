@@ -11,7 +11,7 @@ fi
 echo "Are you sure you want to completely remove windows 95?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) echo "removing virtual win95" && ./remw95.sh; exit;;
+        Yes ) echo "removing virtual win95" && /usr/share/win95/remw95.sh; exit;;
         No ) exit;;
     esac
 done
