@@ -32,10 +32,10 @@ cp ./* -u /usr/share/win95/ &&
 		echo "Created the uninstall terminal shortcut."
 
  [[ ! -f /usr/bin/inst95 ]]
-		echo "Creating the install terminal shortcut." && ln -sf /usr/share/win95/start.sh /usr/bin/inst95
+		echo "Creating the win95 install terminal shortcut." && ln -sf /usr/share/win95/start.sh /usr/bin/inst95
 
 [[ -f /usr/bin/inst95 ]]
-		echo "Created the install terminal shortcut."
+		echo "Created the win95 install terminal shortcut."
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
 
