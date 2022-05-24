@@ -45,16 +45,9 @@ cp ./* -u /usr/share/win95/ &
 	echo "grabbing ie 95" && 
 	wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso
 
-if [[ -f /usr/share/win95/ie95.iso ]]
+if [[ -f /usr/share/win95/ie95.iso ]]; then
 			#/usr/share/win95/ie95.iso
-			echo "Redownload IE-95?"
-
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) wget 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso; break;;
-        No ) break;;
-    esac
-done
+			echo "skippping IE 95; fully downloaded"
 	
 
 #else if doesn't work, try elif, no doesn't work... hmmm, else works.. NOT
@@ -63,14 +56,7 @@ done
 		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso
 	
 	 if [[ -f /usr/share/win95/instdisc.iso ]]; then
-		echo "instdisc.iso file exists, replace?"
-
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) wget 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso; break;;
-        No ) break;;
-    esac
-done
+			echo "skippping the install disk for windows 95; fully downloaded"
 
 #Will create the new drive.
 
