@@ -45,7 +45,7 @@ cp ./* -u /usr/share/win95/ &
 	echo "grabbing ie 95" && 
 	wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso
 
- [[ -f /usr/share/win95/ie95.iso ]]
+if [[ -f /usr/share/win95/ie95.iso ]]
 			#/usr/share/win95/ie95.iso
 			echo "Redownload IE-95?"
 
@@ -117,6 +117,7 @@ select yn in "Yes" "No"; do
     esac
 done
 
+fi
 fi
 fi
 fi
