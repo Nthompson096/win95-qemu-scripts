@@ -25,9 +25,6 @@ The downloads should resume even if internet has been disconnected and it should
 
 *If anything else fails, just reinstall.*
 
-***UPDATE:***
-for additonal drivers or a reinstall, just run the inst95 as sudo inside terminal after the inital.
-
 ## I don't have QEMU installed, says command not found:
 
 You will have to install qemu with package manager/linux flavor of your choice; 
@@ -57,7 +54,7 @@ All jokes aside, choose what you are ok with and mount windows; you may also jus
 
 # Addtional Drivers 
 
-To load additonal drivers, you would have to restart the installation process or start the script by entering `./usr/share/win95/start.sh` <br/>
+To load additonal drivers, you would have to restart the installation process or start the script by entering `sudo inst95` inside the terminal <br/>
 Included are the following; ftp drivers, internet explorer 4.0, firefox etc etc.
 ***UPDATE:*** I've included the install script inside the bin dir along with an uninstall script; may not work with previous.
 If having issues with that enter git clone from earlier copy and make executable `sudo chmod +x && sudo cp -u ./*.sh /usr/share/win95` the shell files from the git dir into the usr/share/win95 dir.
