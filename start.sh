@@ -11,7 +11,7 @@ else
 [[ ! -d /usr/share/win95 ]]
 mkdir /usr/share/win95 2> /dev/null && 
 chmod +x ./*.sh &&
-cp ./* -u /usr/share/win95/ &
+cp ./* -u /usr/share/win95/ &&
 
 [[ ! -f /usr/bin/win95nokvm ]]
 		echo "Creating shortcuts in /usr/bin for no win95kvm" && ln -sf /usr/share/win95/winstartnokvm.sh /usr/bin/win95nokvm 
@@ -25,42 +25,35 @@ cp ./* -u /usr/share/win95/ &
 [[ -f /usr/bin/win95kvm ]]
 		echo "Created KVM shortcuts for windows 95"
 
-[[ ! -f /usr/bin/uninst95 ]]
+ [[ ! -f /usr/bin/uninst95 ]]
 		echo "Creating the uninstall terminal shortcut." && ln -sf /usr/share/win95/uninst95.sh /usr/bin/uninst95 
 
 [[ -f /usr/bin/uninst95 ]]
 		echo "Created the uninstall terminal shortcut."
 
-[[ ! -f /usr/bin/inst95 ]]
+ [[ ! -f /usr/bin/inst95 ]]
 		echo "Creating the install terminal shortcut." && ln -sf /usr/share/win95/start.sh /usr/bin/inst95
 
 [[ -f /usr/bin/inst95 ]]
 		echo "Created the install terminal shortcut."
 
-
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
+
  
 [[ ! -f /usr/share/win95/ie95.iso ]]
 #touch /usr/share/win95/ie95.iso
 	echo "grabbing ie 95" && 
-	wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso
-
-if [[ -f /usr/share/win95/ie95.iso ]]; then
-			#/usr/share/win95/ie95.iso
-			echo "skippping IE 95; fully downloaded"
+	wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso;
 	
-
 #else if doesn't work, try elif, no doesn't work... hmmm, else works.. NOT
-
-	 [[ ! -f /usr/share/win95/instdisc.iso ]]; #then
-		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso
-	
-	 if [[ -f /usr/share/win95/instdisc.iso ]]; then
-			echo "skippping the install disk for windows 95; fully downloaded"
+ 
+[[ ! -f /usr/share/win95/instdisc.iso ]]
+		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso;
 
 #Will create the new drive.
 
-	if [[ ! -f /var/lib/libvirt/images/win95.qcow2 ]]; then
+if [[ ! -f /var/lib/libvirt/images/win95.qcow2 ]]; then
+
 		qemu-img create -f qcow2 /var/lib/libvirt/images/win95.qcow2 2G && 
 		chmod a+rwX /var/lib/libvirt/images/win95.qcow2 |& 
 		cat /usr/share/win95/key.txt  &&
@@ -68,7 +61,7 @@ if [[ -f /usr/share/win95/ie95.iso ]]; then
 		 /usr/share/win95/win95.sh 2> /dev/null &&  
 		 /usr/share/win95/winstartnokvm.sh 2> /dev/null
 
-	[[ -f /var/lib/libvirt/images/win95.qcow2 ]]
+else	 [[ -f /var/lib/libvirt/images/win95.qcow2 ]]
 		echo "Win95 HDD exists, format virtual drive?"
 select yn in "Yes" "No"; do
     case $yn in
@@ -105,5 +98,4 @@ done
 
 fi
 fi
-fi
-fi
+
