@@ -1,7 +1,7 @@
 # win95-qemu
 booting and creating a windows 95 vm with shell scripts, a mostly automated processes for qemu; linux only.
 
-## ***I would highly recommend virt-manager for now; if using a different distro other than arch-based***
+## ***I would highly recommend virt-manager for now; if using a different distro other than arch-based or redhat linux***
 
 ### To start download these scripts
 
