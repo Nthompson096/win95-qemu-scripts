@@ -40,7 +40,7 @@ cp ./* -u /usr/share/win95/ &
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
  
- if [[ ! -f /usr/share/win95/ie95.iso ]]; then
+[[ ! -f /usr/share/win95/ie95.iso ]]
 #touch /usr/share/win95/ie95.iso
 	echo "grabbing ie 95" && 
 	wget -c 'https://archive.org/download/ie4-win95-winnt/Internet%20Explorer%204.0%20for%20Windows%2095%20and%20NT%204.0.iso' -O /usr/share/win95/ie95.iso
@@ -117,7 +117,6 @@ select yn in "Yes" "No"; do
     esac
 done
 
-fi
 fi
 fi
 fi
