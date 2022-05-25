@@ -36,6 +36,13 @@ cp ./* -u /usr/share/win95/ &&
 
 [[ -f /usr/bin/inst95 ]]
 		echo "Created the win95 install terminal shortcut."
+		
+		
+		 [[ ! -f /usr/bin/win95cpu-patch ]]
+		echo "Creating the win95cpu-patch terminal shortcut." && ln -sf /usr/share/win95/w95cpu.sh /usr/bin/win95cpu-patch
+
+		[[ -f /usr/bin/win95cpu-patch ]]
+		echo "Created the win95cpu-patch install terminal shortcut."
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
 
