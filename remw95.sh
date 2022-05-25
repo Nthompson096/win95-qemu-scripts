@@ -4,7 +4,9 @@ if [[ -f /usr/bin/win95kvm ]]; then
 				[[ -f /usr/bin/win95nokvm ]]
 				 rm /usr/bin/win95nokvm 
 				 [[ -f /usr/bin/uninst95 ]] 
-				    rm /usr/bin/uninst95
+				    rm /usr/bin/uninst95				 
+				    [[ -f /usr/bin/win95cpu-patch ]] 
+				    rm /usr/bin/win95cpu-patch
 				[[ -f /var/lib/libvirt/images/win95.qcow2 ]]
 				     rm /var/lib/libvirt/images/win95.qcow2
 				    [[ -d /usr/share/win95/ ]] 
