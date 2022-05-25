@@ -82,6 +82,6 @@ The XML document above can be used to create a virtual for virt-manager; be sure
 
 ### Credits
 [The qemu Wiki](https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95) for this wonderful guide, also could give you more info. <br/>
-[OS Dev post, posting out how buggy the SB-16 drive is](https://forum.osdev.org/viewtopic.php?f=1&t=39652)
+[OS Dev post, pointing out how buggy the SB-16 drive is](https://forum.osdev.org/viewtopic.php?f=1&t=39652)
 
 Thank you for checking out this repoisitory, be sure to star it if you ever find this useful.
