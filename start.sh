@@ -76,6 +76,7 @@ select yn in "Yes" "No"; do
 	esac
 done
 
+if [[ -f /var/lib/libvirt/images/win95.qcow2 ]]; then
 echo "Are you trying to continue an install"
 
 select yn in "Yes" "No"; do
@@ -96,6 +97,7 @@ select yn in "Yes" "No"; do
     esac
 done
 
+fi
 fi
 fi
 
