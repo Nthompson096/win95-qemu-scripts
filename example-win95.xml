@@ -38,13 +38,13 @@
    <emulator>/usr/bin/qemu-system-x86_64</emulator>
    <disk type="file" device="disk">
      <driver name="qemu" type="qcow2"/>
-     <source file="/path/to/the/win95.qcow2"/>
+     <source file="/var/lib/libvirt/images/win95.qcow2"/>
      <target dev="hda" bus="ide"/>
      <address type="drive" controller="0" bus="0" target="0" unit="0"/>
    </disk>
    <disk type="file" device="cdrom">
      <driver name="qemu" type="raw"/>
-     <source file="/path/to/the/instdisc.iso"/>
+     <source file="/usr/share/win95/instdisc.iso"/>
      <target dev="hdb" bus="ide"/>
      <readonly/>
      <address type="drive" controller="0" bus="0" target="0" unit="1"/>
