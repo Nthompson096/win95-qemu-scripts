@@ -9,8 +9,8 @@ You would simply go to your terminal of choice and enter git clone `https://gith
 and it should clone to the directory of your choice; enter cd `win95-qemu-scripts` to enter that directory. 
 
 from there enter in the terminal enter `sudo sh ./start.sh` and this will start the installation process, to run these commands all in one do this:
-1) arch based `sudo pacman -Syyu && sudo pacman -S virt-manager qemu && git clone https://github.com/Nthompson096/win95-qemu-scripts.git && cd win95-qemu-scripts && sudo sh ./start.sh`
-2) redhat: `sudo dnf update -y && sudo dnf install -y virt-manager qemu && git clone https://github.com/Nthompson096/win95-qemu-scripts.git && cd win95-qemu-scripts && sudo sh ./start.sh` 
+1) arch based `sudo pacman -Syyu && sudo pacman -S virt-manager qemu && git clone https://github.com/Nthompson096/win95-qemu-scripts.git && cd win95-qemu-scripts && sudo sh ./start.sh` </br>
+2) redhat: `sudo dnf update -y && sudo dnf install -y virt-manager qemu && git clone https://github.com/Nthompson096/win95-qemu-scripts.git && cd win95-qemu-scripts && sudo sh ./start.sh` </br>
 Should only take a few moments in time to download the install disks and IE95. If asked to replace these files, enter `2`. If you'd like to install additonal drivers after the install from an ISO file with qemu from the command line; run the install program again, enter `2` up until `it asks if you'd like to install additonal drivers`; enter `1` for yes, this will ask you this after everything else initally.
 
 In the command prompt hit enter for the current selection and then enter `fdisk` to partition the disk as DOS and enter Y to all questions; `press alt-m select machine > quit or hit ctrl-alt-g and select machine and quit` or `ctrl+alt+q`; the install script should install the script for you. this will start up the vm again for you, hit enter for the first selection and then format the C: drive with the command `format c:` and enter `Y` and hit enter and it should format the `C:\drive` when finished. You will be asked for a label, go ahead and name or enter nothing.
