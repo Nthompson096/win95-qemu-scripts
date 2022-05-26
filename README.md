@@ -73,6 +73,8 @@ If having issues with that enter git clone from earlier copy and make executable
 Sadly I have no idea what is causing this, like I said this OS is old so expect issues. Recently decided to remove 
 -soundhw sb16 in the scripts but you can re-add it if you'd like; be warned I had issues with BSOD.
 
+To enable sound you would have to edit /usr/share/win95/winstartnokvm.sh with your favorite text editor.
+
 Alternatively it would be best to just run the machine in virt-manager with the xml document I have provided below as it fixes the sound issue; new issue is that the network will not work, but you can use the shell scripts provided to work around this.
 
 [There is a wiki for a work around however.](https://wiki.osdev.org/Sound_Blaster_16#QEMU_support)
