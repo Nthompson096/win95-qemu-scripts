@@ -36,13 +36,12 @@ cp ./* -u /usr/share/win95/ &&
 
 [[ -f /usr/bin/inst95 ]]
 		echo "Created the win95 install terminal shortcut."
-		
-		
-		 [[ ! -f /usr/bin/win95cpu-patch ]]
-		echo "Creating the win95cpu-patch terminal shortcut." && ln -sf /usr/share/win95/w95cpu.sh /usr/bin/win95cpu-patch
 
-		[[ -f /usr/bin/win95cpu-patch ]]
-		echo "Created the win95cpu-patch install terminal shortcut."
+		 [[ ! -f /usr/bin/inst95 ]]
+		echo "Creating the win95 install terminal shortcut." && ln -sf /usr/share/win95/w95cpu.sh /usr/bin/win95cpu
+
+[[ -f /usr/bin/inst95 ]]
+		echo "Created the win95 cpu patch for KVM."
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
 
@@ -56,6 +55,7 @@ cp ./* -u /usr/share/win95/ &&
  
 [[ ! -f /usr/share/win95/instdisc.iso ]]
 		wget -c 'https://archive.org/download/microsoft-windows95-osr2/windows95osr2.iso' -O /usr/share/win95/instdisc.iso;
+
 
 #Will create the new drive.
 
@@ -96,10 +96,23 @@ select yn in "Yes" "No"; do
     esac
 done
 
+if [[ -f /var/lib/libvirt/images/win95.qcow2 ]]; then
+echo "Would you like to upgrade this machine from 95 to 98 SE?"
+
+select yn in "Yes" "No"; do
+    case $yn in
+ 		
+ 		Yes ) wget -c 'https://archive.org/download/windows-98-se-upgrade/Windows%2098%20se%20Upgrade.iso' -O /usr/share/win95/win98se.iso &&
+		 touch ./98key.txt |& echo VYK42-6KXD9-2C333-3D898-J97HP > ./98key.txt && cat ./98key.txt && ./win95-up.sh; break;;
+        No )  break;;
+    esac
+done
+
+
 echo "want to install additonal drivers for windows 95?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) /usr/share/win95/ie95.sh ; break;;
+        Yes ) /usr/share/win95/ie95.sh; break;;
         No ) exit;;
     esac
 done
@@ -107,4 +120,4 @@ done
 fi
 fi
 fi
-
+fi
