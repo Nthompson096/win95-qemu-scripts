@@ -29,19 +29,19 @@ This is pretty easy; after installing windows 95 to 98 you would just have to ru
 
 # Basic Troubleshooting
 
-## My install didn't download/install correctly, what should i do?
+### My install didn't download/install correctly, what should i do?
 The downloads should resume even if internet has been disconnected and it should continue with the download; you also have the option to redownload images. If asked about overwriting files, enter `2` in terminal unless if you have a specific reason like you'd want to overwite your virtual hard disk in `/usr/lib/libvirt/images/`.
 
 *If anything else fails, just reinstall.*
 
-## I don't have QEMU installed, says command not found:
+### I don't have QEMU installed, says command not found:
 
 You will have to install qemu with package manager/linux flavor of your choice; 
 1) for me it would be `sudo pacman -S qemu` this would be arch or manjaro; also be sure to install qemu-full; if having issues with manjaro be sure to update then install.
 2) for fedora or redhat based distros, use `sudo dnf install qemu`
 3) So far this script works for arch or redhat based linux; ubuntu or debian based linux is giving me issues.
 
-# I want KVM support, but how can i do this?
+### I want KVM support, but how can i do this?
 
 First I would like to tell you KVM support on win95 is fincky; it doesn't shutoff properly like it's supposed to so i've made it run without kvm enabled, but if you want you can run kvm support with winstartkvm.sh, before you do so you will need to run w95cpu.sh otherwise the cpu on that machine will be in protection mode and will not boot, go ahead and patch when prompted to reboot quit, you should now be able to run win95 with kvm support with the script i just mentioned earlier.
 
@@ -55,20 +55,20 @@ You need to go control panel and under network and add TCP/IP under `control pan
 UPDATE: Just connected to google search, was easy but most sites will crash on you; go to the icon named "the internet" and keep current settings, double click again and type in the url bar google.com. <br/>
 **DO NOT USE A MODEM OR ANYTHING ELSE**.
 
-# I've created a virtual machine in virt-manager and there is no internet on my network!
+### I've created a virtual machine in virt-manager and there is no internet on my network!
 
 Fret not; seeing how this is a virtual environment you could create a shared linux hard drive that's seperate to your windows. Install the linux of your choice.
 <br/>`I use arch btw`<br/>
 All jokes aside, choose what you are ok with and mount windows; you may also just use a live-CD instead.
 
-# Addtional Drivers 
+### Addtional Drivers 
 
 To load additonal drivers, you would have to start the installation script by entering `sudo inst95` inside the terminal <br/>
 Included are the following; ftp drivers, internet explorer 4.0, firefox etc etc. do not format your drive when asked or continue an install; it will ask you later if you wanted to install additonal drivers.
 ***UPDATE:*** I've included the install script inside the bin dir along with an uninstall script; may not work with previous.
 If having issues with that enter git clone from earlier copy and make executable `sudo chmod +x && sudo cp -u ./*.sh /usr/share/win95` the shell files from the git dir into the usr/share/win95 dir.
 
-# Sound is choppy, there is no sound.
+### Sound is choppy, there is no sound.
 
 Sadly I have no idea what is causing this, like I said this OS is old so expect issues. Recently decided to remove 
 -soundhw sb16 in the scripts but you can re-add it if you'd like; be warned I had issues with BSOD.
@@ -77,13 +77,14 @@ To enable sound you would have to edit /usr/share/win95/winstartnokvm.sh with yo
 
 Alternatively it would be best to just run the machine in virt-manager with the xml document I have provided below as it fixes the sound issue; new issue is that the network will not work, but you can use the shell scripts provided to work around this.
 
-# I tried formatting my drive but it errored out; showed me the key but didn't do anything.
+[There is a wiki for a work around however.](https://wiki.osdev.org/Sound_Blaster_16#QEMU_support)
+
+
+### I tried formatting my drive but it errored out; showed me the key but didn't do anything.
 
 Try executing this script again, it will work.
 
-[There is a wiki for a work around however.](https://wiki.osdev.org/Sound_Blaster_16#QEMU_support)
-
-# Bounus, creating the VM with virt-manager
+### Bounus, creating the VM with virt-manager
 
 [the example XML document hosted inside this repo; it's TL:DR](https://raw.githubusercontent.com/Nthompson096/win95-qemu-scripts/main/example-win95.xml)
 
