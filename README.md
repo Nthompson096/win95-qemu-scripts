@@ -77,6 +77,10 @@ To enable sound you would have to edit /usr/share/win95/winstartnokvm.sh with yo
 
 Alternatively it would be best to just run the machine in virt-manager with the xml document I have provided below as it fixes the sound issue; new issue is that the network will not work, but you can use the shell scripts provided to work around this.
 
+# I tried formatting my drive but it errored out; showed me the key but didn't do anything.
+
+Try executing this script again, it will work.
+
 [There is a wiki for a work around however.](https://wiki.osdev.org/Sound_Blaster_16#QEMU_support)
 
 # Bounus, creating the VM with virt-manager
