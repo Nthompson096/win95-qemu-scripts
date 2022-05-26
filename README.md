@@ -21,6 +21,11 @@ to continue an install or to install drivers enter `sudo inst95`
 
 also added windows 98 SE update disk, will ask if you wanted to upgrade from 95 to 98 after installing 95. To do so enter `sudo inst95` again.
 This will wget an update disk and give you a key inside a terminal.
+
+# Upgrading windows 95 to windows 98
+
+This is pretty easy; after installing windows 95 to 98 you would just have to run the installer and it will ask if you'd want to upgrade from 95 to 98, it will then create a SE key and print one out for you inside the terminal. As before; do not create a bootdisk.
+
 # Basic Troubleshooting
 
 ## My install didn't download/install correctly, what should i do?
