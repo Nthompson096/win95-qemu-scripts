@@ -19,6 +19,8 @@ When that is done enter `D:\SETUP` to launch setup; hit enter and continue and h
 to uninstall windows 95 off of your system via terminal enter `sudo uninst95`
 to continue an install or to install drivers enter `sudo inst95`
 
+also added windows 98 SE update disk, will ask if you wanted to upgrade from 95 to 98 after installing 95. To do so enter `sudo inst95` again.
+
 # Basic Troubleshooting
 
 ## My install didn't download/install correctly, what should i do?
