@@ -103,7 +103,7 @@ select yn in "Yes" "No"; do
     case $yn in
  		
  		Yes ) wget -c 'https://archive.org/download/windows-98-se-upgrade/Windows%2098%20se%20Upgrade.iso' -O /usr/share/win95/win98se.iso &&
-		 touch ./98key.txt |& echo VYK42-6KXD9-2C333-3D898-J97HP > ./98key.txt && cat ./98key.txt && ./win95-up.sh; break;;
+		 touch ./98key.txt |& echo VYK42-6KXD9-2C333-3D898-J97HP > ./98key.txt && cat ./98key.txt && /usr/share/win95/win95-up.sh; break;;
         No )  break;;
     esac
 done
