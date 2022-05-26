@@ -38,7 +38,7 @@ cp ./* -u /usr/share/win95/ &&
 		echo "Created the win95 install terminal shortcut."
 
 		 [[ ! -f /usr/bin/inst95 ]]
-		echo "Creating the win95 install terminal shortcut." && ln -sf /usr/share/win95/w95cpu.sh /usr/bin/win95cpu
+		echo "Creating the win95 cpu patch for KVM." && ln -sf /usr/share/win95/w95cpu.sh /usr/bin/win95cpu
 
 [[ -f /usr/bin/inst95 ]]
 		echo "Created the win95 cpu patch for KVM."

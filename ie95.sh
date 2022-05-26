@@ -9,7 +9,8 @@
 	-vga cirrus \
 	-boot order=a \
         -drive file=/usr/share/win95/ie95.iso,media=cdrom \
-        -drive file=/usr/share/win95/w95.iso,media=cdrom  
+        -drive file=/usr/share/win95/w95.iso,media=cdrom  \
+        -drive file=/usr/share/win95/exes.iso,media=cdrom  
 	#-drive file=,format=,index=0,if=floppy
 	# comments
 	# Basically what -cdrom does is to define where and what the cdrom image is, usful for sharing files on this VM
