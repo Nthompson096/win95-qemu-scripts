@@ -37,10 +37,10 @@ cp ./* -u /usr/share/win95/ &&
 [[ -f /usr/bin/inst95 ]]
 		echo "Created the win95 install terminal shortcut."
 
-		 [[ ! -f /usr/bin/inst95 ]]
+		 [[ ! -f /usr/bin/win95cpu-patch ]]
 		echo "Creating the win95 cpu patch for KVM." && ln -sf /usr/share/win95/w95cpu.sh /usr/bin/win95cpu
 
-[[ -f /usr/bin/inst95 ]]
+[[ -f /usr/bin/win95cpu-patch ]]
 		echo "Created the win95 cpu patch for KVM."
 
 #Yo dawg where's the install disk? if it's here I'll see if the disc is downloaded anyway...
