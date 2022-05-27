@@ -88,7 +88,7 @@ Try executing this script again, it will work.
 
 ### Bounus, creating the VM with virt-manager
 
-[the example XML document hosted inside this repo; it's TL:DR](https://raw.githubusercontent.com/Nthompson096/win95-qemu-scripts/main/example-win95.xml)
+[the example XML document hosted inside this repo; it's TL:DR](https://raw.githubusercontent.com/Nthompson096/win95-qemu-scripts/main/example-win95.xml) </br>
 [Be sure that you've enabled xml editing in virt manager](https://blog.wikichoon.com/2020/07/virt-manager-xml-editor.html)
 
 The XML document above can be used to create a virtual for virt-manager; be sure to set the flag to <br /> `<domain type="qemu">` at the start of the xml document. You could've also instead cloned the created virtual w95 file and create a new install with virt-manager or use the exisitng image. You would need to install a program named FIXCPU95, just use the floppy if doing everything by the command line. Also be sure to copy paste everything after UUID or adjust the values if needed.
