@@ -27,6 +27,8 @@ This will wget an update disk and give you a key inside a terminal.
 
 This is pretty easy; after installing windows 95 to 98 you would just have to run the installer and it will ask if you'd want to upgrade from 95 to 98, it will then create a SE key and print one out for you inside the terminal. As before; do not create a bootdisk. If asked about a win98 startup disk; hit cancel. I'd highly recommend that you'd set up your internet settings first with win95 before upgrading. Also be sure to save existing system files.
 
+[If you are going to install kernelx on windows 98; here's a compaitablity list.](http://kernelex.sourceforge.net/mediawiki/index.php?title=Category:Compatible_applications&redirect=no)
+
 # Basic Troubleshooting
 
 ### My install didn't download/install correctly, what should i do?
