@@ -1,14 +1,37 @@
 #!/bin/sh
-if [ -f /usr/bin/win95kvm ]; then
+	
+	if 
+	[ -f /usr/bin/win95kvm ]; then
 	rm /usr/bin/win95kvm
-        [ -f /usr/bin/win95nokvm ]
+	fi
+	
+	if
+    [ -f /usr/bin/win95nokvm ]; then
 	rm /usr/bin/win95nokvm 
-	[ -f /usr/bin/uninst95 ] 
-	rm /usr/bin/uninst95				 
-	[ -f /usr/bin/win95cpu ] 
-	 rm /usr/bin/win95cpu
-	[ -f /var/lib/libvirt/images/win95.qcow2 ]
+	fi
+	
+	if
+	[ -f /usr/bin/uninst95 ] ; then
+	rm /usr/bin/uninst95
+	fi
+
+	if
+	[ -f /usr/bin/inst95 ] ; then
+	rm /usr/bin/inst95
+	fi
+	
+	if
+	[ -f /usr/bin/win95cpu ]; then
+	rm /usr/bin/win95cpu
+	fi
+	
+	if
+	[ -f /var/lib/libvirt/images/win95.qcow2 ]; then
 	rm /var/lib/libvirt/images/win95.qcow2
-        [ -d /usr/share/win95/ ] 
-	rm -r /usr/share/win95/;				    
-fi
+    fi
+
+
+    if
+    [ -d /usr/share/win95/ ]; then 
+	rm -r /usr/share/win95/
+	fi
