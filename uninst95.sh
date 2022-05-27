@@ -1,10 +1,10 @@
 #!/bin/sh
-if [[ "$EUID" -ne 0 ]];
+if [ "$EUID" -ne 0 ];
 	  then echo "Please run sudo."
 		    exit
 else
 
-	  [[ "$EUID" -ne 1 ]];
+	  [ "$EUID" -ne 1 ];
 
 fi
 
