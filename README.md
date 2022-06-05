@@ -3,7 +3,10 @@ booting and creating a windows 95 vm with shell scripts, a mostly automated proc
 
 ### To start download these scripts
 
-You would simply go to your terminal of choice and enter git clone `https://github.com/Nthompson096/win95-qemu-scripts.git` 
+You would simply go to your terminal of choice and enter git clone 
+     
+    https://github.com/Nthompson096/win95-qemu-scripts.git
+ 
 and it should clone to the directory of your choice; enter cd `win95-qemu-scripts` to enter that directory. 
 
 from there enter in the terminal enter `sudo sh ./start.sh` and this will start the installation process, to run these commands all in one do this:
