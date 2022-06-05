@@ -40,8 +40,6 @@ fi
 if [[ -f /usr/bin/apt ]]; then
 	echo "This system appears to be debian/ubuntu based; will install with apt." &&
  sudo apt update && sudo apt upgrade && sudo apt install qemu-system
-else
-	[[ ! -f /usr/bin/apt ]]
 fi
 
 
