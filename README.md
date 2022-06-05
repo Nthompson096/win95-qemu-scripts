@@ -12,11 +12,11 @@ and it should clone to the directory of your choice; enter cd `win95-qemu-script
 from there enter in the terminal enter `sudo sh ./start.sh` and this will start the installation process, to run these commands all in one do this:
 1) arch based
  
-          cd win95-qemu-scripts && sudo sh ./start.sh
+          cd win95-qemu-scripts && sudo bash ./start.sh
 
 3) redhat: 
   
-        cd win95-qemu-scripts &&  sudo sh ./start.sh
+        cd win95-qemu-scripts &&  sudo bash ./start.sh
 
 4) ubuntu or debian: 
 
