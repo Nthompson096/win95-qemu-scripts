@@ -54,6 +54,8 @@ You will have to install qemu with package manager/linux flavor of your choice;
 2) for fedora or redhat based distros, use `sudo dnf install qemu`
 3) So far this script works for arch or redhat based linux; ubuntu or debian based linux is giving me issues.
 
+However this installer should've detected the distro you were using (arch, fedora, ubuntu/debian); should've installed no problems.
+
 ### I want KVM support, but how can i do this?
 
 First I would like to tell you KVM support on win95 is fincky; it doesn't shutoff properly like it's supposed to so i've made it run without kvm enabled, but if you want you can run kvm support with winstartkvm.sh, before you do so you will need to run w95cpu.sh otherwise the cpu on that machine will be in protection mode and will not boot, go ahead and patch when prompted to reboot quit, you should now be able to run win95 with kvm support with the script i just mentioned earlier.
