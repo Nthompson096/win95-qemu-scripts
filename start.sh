@@ -23,6 +23,28 @@ select yn in "Yes" "No"; do
 	esac
 done
 
+if [[ -f /usr/bin/pacman ]]; then
+	echo "This is an arch system, will install with pacman" &&
+ sudo pacman -Syyu && sudo pacman -S qemu-full
+else
+	[[ ! -f /usr/bin/pacman ]]
+fi
+
+if [[ -f /usr/bin/dnf ]]; then
+	echo "This system appears to be redhat based; will install with DNF." &&
+ sudo dnf update && sudo dnf install qemu
+else
+	[[ ! -f /usr/bin/dnf ]]
+fi
+
+if [[ -f /usr/bin/apt ]]; then
+	echo "This system appears to be debian/ubuntu based; will install with apt." &&
+ sudo apt update && sudo apt upgrade && sudo apt install qemu-system
+else
+	[[ ! -f /usr/bin/apt ]]
+fi
+
+
 if [ ! -d /usr/share/win95 ]; then
 mkdir /usr/share/win95 2> /dev/null && chmod +x ./*.sh && cp ./* -u /usr/share/win95/ 
 
