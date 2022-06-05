@@ -20,7 +20,7 @@ from there enter in the terminal enter `sudo sh ./start.sh` and this will start 
 
 4) ubuntu or debian: 
 
-        sudo apt update && sudo apt upgrade -y && sudo apt install virt-manager qemu-system -y && git clone https://github.com/Nthompson096/win95-qemu-scripts.git && cd win95-qemu-scripts && sudo ./start.sh
+        sudo apt update && sudo apt upgrade -y && sudo apt install virt-manager qemu-system -y && git clone https://github.com/Nthompson096/win95-qemu-scripts.git && cd win95-qemu-scripts && sudo bash ./start.sh
 
 Should only take a few moments in time to download the install disks and IE95. If asked to replace these files, enter `2`. If you'd like to install additonal drivers after the install from an ISO file with qemu from the command line; run the install program again, enter `2` up until `it asks if you'd like to install additonal drivers`; enter `1` for yes, this will ask you this after everything else initally.
 
