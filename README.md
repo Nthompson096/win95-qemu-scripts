@@ -10,15 +10,7 @@ You would simply go to your terminal of choice and enter git clone
 and it should clone to the directory of your choice; enter cd `win95-qemu-scripts` to enter that directory. 
 
 from there enter in the terminal enter `sudo bash ./start.sh` and this will start the installation process, to run these commands all in one do this:
-1) arch based
- 
-          cd win95-qemu-scripts && sudo bash ./start.sh
-
-3) redhat: 
-  
-        cd win95-qemu-scripts &&  sudo bash ./start.sh
-
-4) ubuntu or debian: 
+1) arch based, debian/ubuntu, or redhat based.
 
         cd win95-qemu-scripts && sudo bash ./start.sh
 
