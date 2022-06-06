@@ -12,7 +12,7 @@ and it should clone to the directory of your choice; enter cd `win95-qemu-script
 from there enter in the terminal enter `sudo bash ./start.sh` and this will start the installation process, to run these commands all in one do this:
 1) arch based, debian/ubuntu, or redhat based.
 
-        cd win95-qemu-scripts && sudo bash ./start.sh
+       cd win95-qemu-scripts && sudo bash ./start.sh
 
 Should only take a few moments in time to download the install disks and IE95; along with qemu if not installed. If asked to replace these files, enter `2`. If you'd like to install additonal drivers after the install from an ISO file with qemu from the command line; run the install program again, enter `2` up until `it asks if you'd like to install additonal drivers`; enter `1` for yes, this will ask you this after everything else initally.
 
