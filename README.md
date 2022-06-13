@@ -73,7 +73,9 @@ UPDATE: Just connected to google search, was easy but most sites will crash on y
 ### I've created a virtual machine in virt-manager and there is no internet on my network!
 
 Fret not; seeing how this is a virtual environment you could create a shared linux hard drive that's seperate to your windows. Install the linux of your choice.
-<br/>`I use arch btw`<br/>
+ 
+    I use arch btw
+
 All jokes aside, choose what you are ok with and mount windows; you may also just use a live-CD instead.
 
 ### Addtional Drivers 
