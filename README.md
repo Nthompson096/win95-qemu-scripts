@@ -94,7 +94,7 @@ To enable sound you would have to edit /usr/share/win95/winstartnokvm.sh with yo
 
 Alternatively it would be best to just run the machine in virt-manager with the xml document I have provided below as it fixes the sound issue; new issue is that the network will not work, but you can use the shell scripts provided to work around this.
 
-[There is a wiki for a work around however.](https://wiki.osdev.org/Sound_Blaster_16#QEMU_support)
+[There is a wiki for a work around however.](https://web.archive.org/web/20221130122127/https://wiki.osdev.org/Sound_Blaster_16#QEMU_support)
 
 
 ### I tried formatting my drive but it errored out; showed me the key but didn't do anything.
@@ -113,7 +113,7 @@ The XML document above can be used to create a virtual for virt-manager; be sure
 # EoF:
 
 ### Credits
-[The qemu Wiki](https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95) for this wonderful guide, also could give you more info. <br/>
-[OS Dev post, pointing out how buggy the SB-16 drive is](https://forum.osdev.org/viewtopic.php?f=1&t=39652)
+[The qemu Wiki](https://web.archive.org/web/20220713160206/https://wiki.qemu.org/Documentation/GuestOperatingSystems/Windows95) for this wonderful guide, also could give you more info. <br/>
+[OS Dev post, pointing out how buggy the SB-16 drive is](https://web.archive.org/web/20221130122357/https://forum.osdev.org/viewtopic.php?f=1&t=39652)
 
 Thank you for checking out this repoisitory, be sure to star it if you ever find this useful.
