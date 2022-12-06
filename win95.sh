@@ -10,4 +10,3 @@ qemu-system-i386 \
 	-fda /usr/share/win95/disk01.img \
 	-cdrom /usr/share/win95/instdisc.iso \
 	-boot a \
-	-soundhw pcspk 
