@@ -63,7 +63,8 @@ You need to go control panel and under network and add TCP/IP under
 
 and you should be set; you also need to change the setting the `irq freq to 9` under 
           
-    my computer > control panel > system > device manager > network adapters > double click on the network adapter and go to resources
+    my computer > control panel > system > device manager > 
+    network adapters > double click on the network adapter and go to resources
 
 Set the config manually; (uncheck automatic settings);
  
