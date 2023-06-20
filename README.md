@@ -41,6 +41,16 @@ The downloads should resume even if internet has been disconnected and it should
 
 *If anything else fails, just reinstall.*
 
+### IOS  Protection error
+
+If you enounter this error, apply the cpu patch from the repo; or just start this line of code
+
+```
+sh ./winstartnokvm.sh
+```
+
+This should start windows-95 for you.
+
 ### I don't have QEMU installed, says command not found:
 
 You will have to install qemu with package manager/linux flavor of your choice; 
